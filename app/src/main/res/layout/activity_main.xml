@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context=".view.activity.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways|snap">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:contentInsetLeft="0dp"
+            app:contentInsetRight="0dp"
+            app:contentInsetStart="0dp"
+            app:contentInsetStartWithNavigation="0dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            tools:ignore="RtlSymmetry">
+
+            <RelativeLayout
+                android:id="@+id/layout_toolbar_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:fontFamily="@font/default_medium"
+                    android:layout_marginStart="@dimen/margin_12"
+                    android:maxHeight="?attr/actionBarSize"
+                    android:text="@string/app_name_inapp"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/text_body1"
+                    app:drawableLeftCompat="@drawable/ic_school_white" />
+
+                <ImageButton
+                    android:id="@+id/btn_info"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_alignParentEnd="true"
+                    android:background="@android:color/transparent"
+                    android:padding="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_info_white" />
+
+                <ImageButton
+                    android:id="@+id/btn_setting"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_toStartOf="@id/btn_info"
+                    android:background="@android:color/transparent"
+                    android:padding="16dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_settings_white" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpaper_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_bottom_home"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/primary"
+        app:itemIconTint="@color/bot_nav_tint_color"
+        app:itemTextColor="@color/bot_nav_tint_color"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:menu="@menu/home_nav_menu" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

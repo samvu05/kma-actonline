@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--round rect style Items News-->
+    <style name="roundRectStyleItemNews">
+        <item name="android:layout_marginBottom">@dimen/margin_4</item>
+        <item name="android:layout_marginLeft">@dimen/margin_8</item>
+        <item name="android:layout_marginRight">@dimen/margin_8</item>
+        <item name="android:layout_marginTop">@dimen/margin_4</item>
+    </style>
+
+    <!-- calendar view custom style -->
+    <style name="CustomCalendarDay" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/default_medium</item>
+        <item name="android:textSize">@dimen/text_body1</item>
+    </style>
+
+    <style name="CustomCalendarWeek" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textColor">@color/highlight</item>
+        <item name="fontFamily">@font/default_bold</item>
+        <item name="android:textSize">@dimen/text_body1</item>
+    </style>
+
+    <style name="CustomCalendarMonth" parent="Theme.ActOnline">
+        <item name="android:textColorPrimary">@color/primary</item>
+        <item name="fontFamily">@font/default_bold</item>
+    </style>
+</resources>

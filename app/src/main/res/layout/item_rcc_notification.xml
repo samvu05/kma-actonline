@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="itemData"
+            type="com.example.actonline.model.ItemNotification" />
+
+    </data>
+
+    <RelativeLayout
+        style="@style/roundRectStyleItemNews"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_rec_white"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/imv_item_rcc"
+            android:layout_width="112dp"
+            android:layout_height="84dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg_item_notification" />
+
+        <TextView
+            android:id="@+id/tv_name_item_rcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_toEndOf="@id/imv_item_rcc"
+            android:fontFamily="@font/default_regular"
+            android:ellipsize="end"
+            android:singleLine="false"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:text="@string/default_notification_title"
+            android:textSize="@dimen/text_body2" />
+
+        <TextView
+            android:id="@+id/tv_email_item_rcc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name_item_rcc"
+            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_4"
+            android:layout_toEndOf="@id/imv_item_rcc"
+            android:ellipsize="end"
+            android:fontFamily="@font/default_light"
+            android:maxLines="2"
+            android:text="@string/default_notification_decs"
+            android:singleLine="false"
+            android:textSize="13sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imv_item_rcc"
+            android:layout_marginTop="@dimen/margin_4">
+
+            <TextView
+                android:id="@+id/tv_datetime_item_rcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                android:fontFamily="@font/default_regular"
+                android:drawablePadding="3dp"
+                android:text="05/05/2021"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_seen_item_rcc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_12"
+                android:drawablePadding="4dp"
+                android:text="@string/seen"
+                android:textSize="11sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

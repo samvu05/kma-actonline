@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/navbot_item_home"
+        android:icon="@drawable/ic_home"
+        android:title="Trang chủ" />
+    <item
+        android:id="@+id/nav_bottom_calendar"
+        android:icon="@drawable/ic_calendar_today"
+        android:title="Lịch học" />
+    <item
+        android:id="@+id/navbot_item_notification"
+        android:icon="@drawable/ic_notification"
+        android:title="Thông báo" />
+    <item
+        android:id="@+id/navbot_item_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Cá nhân" />
+
+</menu>

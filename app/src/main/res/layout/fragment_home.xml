@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_8">
+
+        <TextView
+            android:id="@+id/tv_hello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/default_light"
+            android:text="Xin chào"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_body1" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hello"
+            android:fontFamily="@font/default_regular"
+            android:text="Vu Dinh Sam"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/text_head2" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_1"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="@dimen/margin_8"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bg_study"
+                    android:scaleType="centerCrop"
+                    />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_2"
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/cardview_1"
+            android:layout_marginTop="@dimen/margin_8"
+            android:background="@color/white"
+            app:cardCornerRadius="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CE93D8">
+
+                <ImageView
+                    android:id="@+id/iv_maps"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_maps_white"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/iv_maps"
+                    android:layout_marginBottom="@dimen/margin_8"
+                    android:textColor="@color/text_white"
+                    android:fontFamily="@font/default_medium"
+                    android:text="Chỉ đường đến trường" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</ScrollView>

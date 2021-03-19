@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ActOnline</string>
+    <string name="hello">Xin chào !</string>
+    <string name="slogan">Thành công là tổng thể của những nỗ lực nhỏ, lặp đi lặp lại ngày này qua ngày khác.</string>
+    <string name="login_now">Đăng nhập</string>
+    <string name="app_name_inapp">A C T O N L I N E</string>
+    <string name="username">Tên đăng nhập</string>
+    <string name="password">Mật khẩu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_title">Về việc lấy ý kiến phản hồi từ người học về hoạt động giảng dạy của giảng viên học kỳ 1 năm học 2020 – 2021</string>
+    <string name="default_notification_decs">Căn cứ Kế hoạch số 16/KH-HVM ngày 8 tháng 1 năm 2021 của Giám đốc Học viện Kỹ thuật mật mã về việc lấy ý kiến phản hồi từ người học về hoạt động giảng dạy của giảng viên Học kỳ 1 năm học 2020 – 2021</string>
+    <string name="seen">✓ Đã xem</string>
+</resources>
