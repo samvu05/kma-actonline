@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="margin_16">16dp</dimen>
-    <dimen name="margin_8">8dp</dimen>
-    <dimen name="margin_32">32dp</dimen>
-    <dimen name="textsize_level_2">28sp</dimen>
-    <dimen name="textsize_level_5">16sp</dimen>
-    <dimen name="textsize_level_6">14sp</dimen>
-    <dimen name="margin_4">4dp</dimen>
-    <dimen name="margin_layout_default">32dp</dimen>
+    <dimen name="dp64">64dp</dimen>
+    <dimen name="dp32">32dp</dimen>
+    <dimen name="dp28">28dp</dimen>
+    <dimen name="dp24">24dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp12">12dp</dimen>
+    <dimen name="dp8">8dp</dimen>
 
-    <dimen name="text_head1">24sp</dimen>
-    <dimen name="text_head2">20sp</dimen>
-    <dimen name="text_head3">18sp</dimen>
+    <dimen name="textExtraLarge">32sp</dimen>
+    <dimen name="textSemiLarge">22sp</dimen>
+    <dimen name="textLarge">26sp</dimen>
 
-    <dimen name="text_body1">16sp</dimen>
-    <dimen name="text_body2">14sp</dimen>
-    <dimen name="text_body3">12sp</dimen>
+    <dimen name="textNormalLarge">18sp</dimen>
+    <dimen name="textNormal">16sp</dimen>
 
+    <dimen name="textSmall">14sp</dimen>
+    <dimen name="textExtraSmall">12sp</dimen>
 
-    <dimen name="margin_64">64dp</dimen>
-    <dimen name="margin_12">12dp</dimen>
+    <dimen name="sp64">64sp</dimen>
+    <dimen name="sp32">32sp</dimen>
+    <dimen name="sp28">28sp</dimen>
+    <dimen name="sp24">24sp</dimen>
+    <dimen name="sp16">16sp</dimen>
+    <dimen name="sp12">12sp</dimen>
+    <dimen name="sp22">22sp</dimen>
+    <dimen name="sp8">8sp</dimen>
+    <dimen name="dp4">4dp</dimen>
+    <dimen name="dp40">40dp</dimen>
+    <dimen name="dp48">48dp</dimen>
 </resources>

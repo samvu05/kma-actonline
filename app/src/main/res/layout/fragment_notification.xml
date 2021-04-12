@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginTop="@dimen/dp4"
         android:id="@+id/rcc_notification"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

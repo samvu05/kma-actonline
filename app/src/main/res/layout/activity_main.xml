@@ -37,13 +37,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:drawablePadding="@dimen/margin_8"
-                    android:fontFamily="@font/default_medium"
-                    android:layout_marginStart="@dimen/margin_12"
+                    android:drawablePadding="@dimen/dp8"
+                    android:fontFamily="@font/poppins_medium"
+                    android:layout_marginStart="@dimen/dp12"
                     android:maxHeight="?attr/actionBarSize"
                     android:text="@string/app_name_inapp"
                     android:textColor="@color/text_white"
-                    android:textSize="@dimen/text_body1"
+                    android:textSize="@dimen/textLarge"
                     app:drawableLeftCompat="@drawable/ic_school_white" />
 
                 <ImageButton

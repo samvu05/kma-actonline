@@ -14,7 +14,7 @@
         android:layout_width="124dp"
         android:layout_height="124dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_64"
+        android:layout_marginTop="@dimen/dp64"
         android:src="@drawable/img_profile_default" />
 
     <TextView
@@ -23,8 +23,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imv_avatar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_4"
-        android:fontFamily="@font/default_regular"
+        android:layout_marginTop="@dimen/dp4"
+        android:fontFamily="@font/poppins_regular"
         android:text="VU DINH SAM" />
 
     <LinearLayout
@@ -33,7 +33,7 @@
         android:layout_below="@id/tv_name"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginTop="@dimen/dp4"
         android:orientation="horizontal"
         android:weightSum="2">
 
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:fontFamily="@font/default_regular"
+            android:fontFamily="@font/poppins_regular"
             android:text="Lớp: CT1C" />
 
         <TextView
@@ -50,7 +50,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/default_regular"
+            android:fontFamily="@font/poppins_regular"
             android:text="Mssv: CT010337" />
     </LinearLayout>
 </RelativeLayout>

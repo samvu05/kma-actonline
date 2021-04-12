@@ -1,87 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.activity.LoginActivity">
 
-    <RelativeLayout
+    <ImageView
+        android:id="@+id/layout_header"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="@dimen/margin_8">
+        android:layout_height="250dp"
+        android:background="#78909C"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/tv_hello"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/default_light"
-            android:text="Xin chào"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_body1" />
+    <TextView
+        android:id="@+id/txt_appname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp32"
+        android:drawablePadding="@dimen/dp8"
+        android:fontFamily="@font/poppins_bold"
+        android:text="@string/app_name_inapp"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textLarge"
+        app:drawableLeftCompat="@drawable/ic_school"
+        app:drawableTint="@color/text_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/tv_hello"
-            android:fontFamily="@font/default_regular"
-            android:text="Vu Dinh Sam"
-            android:textColor="@color/text_black"
-            android:textSize="@dimen/text_head2" />
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_close_app"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginEnd="@dimen/dp8"
+        android:background="@color/primary_transparent"
+        android:padding="@dimen/dp8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_close_app"
+        android:tint="@color/primary_transparent"
+        app:layout_constraintBottom_toBottomOf="@id/txt_appname"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txt_appname" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardview_1"
-            android:layout_width="match_parent"
-            android:layout_height="175dp"
-            android:layout_below="@id/tv_name"
-            android:layout_marginTop="@dimen/margin_8"
-            app:cardCornerRadius="5dp">
+    <TextView
+        android:id="@+id/txt_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Xin chào,"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_appname" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/bg_study"
-                    android:scaleType="centerCrop"
-                    />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txt_fullname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="VU DINH SAM"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textLarge"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_hello" />
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardview_2"
-            android:layout_width="250dp"
-            android:layout_height="100dp"
-            android:layout_below="@id/cardview_1"
-            android:layout_marginTop="@dimen/margin_8"
-            android:background="@color/white"
-            app:cardCornerRadius="5dp">
+    <TextView
+        android:id="@+id/txt_show_my_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Xem khoa hoc"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_fullname" />
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="#CE93D8">
+    <TextView
+        android:id="@+id/txt_func_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp16"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Chức năng chính"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_header" />
 
-                <ImageView
-                    android:id="@+id/iv_maps"
-                    android:layout_width="42dp"
-                    android:layout_height="42dp"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/ic_maps_white"
-                    android:scaleType="centerCrop" />
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_func_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp16"
+        android:drawableStart="@drawable/ic_edit_for_textview"
+        android:drawablePadding="@dimen/dp8"
+        android:drawableTint="@color/text_color_primary"
+        android:fontFamily="@font/poppins_regular"
+        android:text="Tuỳ chỉnh"
+        android:textColor="@color/text_color_primary"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintBottom_toBottomOf="@id/txt_func_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:targetApi="m" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_below="@id/iv_maps"
-                    android:layout_marginBottom="@dimen/margin_8"
-                    android:textColor="@color/text_white"
-                    android:fontFamily="@font/default_medium"
-                    android:text="Chỉ đường đến trường" />
-            </RelativeLayout>
-        </androidx.cardview.widget.CardView>
-
-    </RelativeLayout>
-
-</ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

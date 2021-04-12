@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter
 /**
  * Created by Dinh Sam Vu on 3/3/2021.
  */
+
 @Suppress("DEPRECATION")
 class ScreenSlidePagerAdapter (fm: FragmentManager) :
     FragmentStatePagerAdapter(fm) {

@@ -8,7 +8,7 @@
         android:id="@+id/cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/margin_8"
+        android:layout_margin="@dimen/dp8"
         app:cardBackgroundColor="@color/white"
         app:cardCornerRadius="5dp">
         <CalendarView
@@ -26,26 +26,26 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/cardview"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/margin_12"
-        android:fontFamily="@font/default_medium"
+        android:layout_marginTop="@dimen/dp12"
+        android:fontFamily="@font/poppins_medium"
         android:textColor="@color/text_black"
         android:text="Lịch học"
-        android:textSize="@dimen/text_body1" />
+        android:textSize="@dimen/textLarge" />
 
     <View
         android:id="@+id/line_bar"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
         android:layout_below="@id/tv_title"
-        android:layout_marginHorizontal="@dimen/margin_16"
-        android:layout_marginTop="@dimen/margin_4"
+        android:layout_marginHorizontal="@dimen/dp16"
+        android:layout_marginTop="@dimen/dp4"
         android:background="@color/highlight" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/line_bar"
-        android:layout_marginTop="@dimen/margin_16">
+        android:layout_marginTop="@dimen/dp16">
         <include
             layout="@layout/placeholder_empty"/>
 

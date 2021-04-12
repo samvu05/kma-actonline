@@ -11,4 +11,11 @@
     <string name="default_notification_title">Về việc lấy ý kiến phản hồi từ người học về hoạt động giảng dạy của giảng viên học kỳ 1 năm học 2020 – 2021</string>
     <string name="default_notification_decs">Căn cứ Kế hoạch số 16/KH-HVM ngày 8 tháng 1 năm 2021 của Giám đốc Học viện Kỹ thuật mật mã về việc lấy ý kiến phản hồi từ người học về hoạt động giảng dạy của giảng viên Học kỳ 1 năm học 2020 – 2021</string>
     <string name="seen">✓ Đã xem</string>
+    <string name="login">Đăng nhập</string>
+    <string name="skip">Bỏ qua</string>
+    <string name="forget_password">Nhớ mật khẩu</string>
+    <string name="site_name">Học viện Kỹ thuật mật mã</string>
+    <string name="site_adress">Add: 141 đường Chiến Thắng, Tân Triều, Thanh Trì, Hà Nội</string>
+    <string name="site_telephone">Tel: 04.38544244</string>
+    <string name="site_website">Website: www.actvn.edu.vn</string>
 </resources>

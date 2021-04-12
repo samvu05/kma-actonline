@@ -27,26 +27,26 @@
             android:id="@+id/tv_name_item_rcc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_8"
+            android:layout_marginStart="@dimen/dp8"
             android:layout_toEndOf="@id/imv_item_rcc"
-            android:fontFamily="@font/default_regular"
+            android:fontFamily="@font/poppins_regular"
             android:ellipsize="end"
             android:singleLine="false"
             android:maxLines="2"
             android:textColor="@color/black"
             android:text="@string/default_notification_title"
-            android:textSize="@dimen/text_body2" />
+            android:textSize="@dimen/textExtraLarge" />
 
         <TextView
             android:id="@+id/tv_email_item_rcc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_name_item_rcc"
-            android:layout_marginStart="@dimen/margin_8"
-            android:layout_marginTop="@dimen/margin_4"
+            android:layout_marginStart="@dimen/dp8"
+            android:layout_marginTop="@dimen/dp4"
             android:layout_toEndOf="@id/imv_item_rcc"
             android:ellipsize="end"
-            android:fontFamily="@font/default_light"
+            android:fontFamily="@font/poppins_light"
             android:maxLines="2"
             android:text="@string/default_notification_decs"
             android:singleLine="false"
@@ -56,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/imv_item_rcc"
-            android:layout_marginTop="@dimen/margin_4">
+            android:layout_marginTop="@dimen/dp4">
 
             <TextView
                 android:id="@+id/tv_datetime_item_rcc"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:drawableLeft="@drawable/ic_baseline_access_time_24"
-                android:fontFamily="@font/default_regular"
+                android:fontFamily="@font/poppins_regular"
                 android:drawablePadding="3dp"
                 android:text="05/05/2021"
                 android:textSize="10sp" />
@@ -73,7 +73,7 @@
                 android:id="@+id/tv_seen_item_rcc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/margin_12"
+                android:layout_marginRight="@dimen/dp12"
                 android:drawablePadding="4dp"
                 android:text="@string/seen"
                 android:textSize="11sp" />

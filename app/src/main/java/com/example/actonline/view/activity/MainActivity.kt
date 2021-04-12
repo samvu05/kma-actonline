@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager.widget.ViewPager
 import com.example.actonline.R
+import com.example.actonline.base.BaseActivity
+import com.example.actonline.databinding.ActivityMainBinding
 import com.example.actonline.view.adapter.ScreenSlidePagerAdapter
 import com.example.actonline.view.fragment.CalendarFragment
 import com.example.actonline.view.fragment.HomeFragment
@@ -11,7 +13,7 @@ import com.example.actonline.view.fragment.NotificationFragment
 import com.example.actonline.view.fragment.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
+class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChangeListener {
     private lateinit var mViewPager: ViewPager
     private lateinit var mBottomNavigation: BottomNavigationView
     private lateinit var mAdapter: ScreenSlidePagerAdapter
@@ -22,7 +24,7 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
         initView()
     }
 
-    private fun initView() {
+    override fun initView() {
         mViewPager = findViewById(R.id.viewpaper_home)
         mBottomNavigation = findViewById(R.id.nav_bottom_home)
         setupViewPager()
@@ -58,4 +60,5 @@ class MainActivity : AppCompatActivity(), ViewPager.OnPageChangeListener {
 
     override fun onPageScrollStateChanged(state: Int) {
     }
+
 }

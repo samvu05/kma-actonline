@@ -9,6 +9,7 @@ import com.example.actonline.model.ItemNotification
 /**
  * Created by Dinh Sam Vu on 3/3/2021.
  */
+
 class RccNotificationAdapter(
     private var listData: MutableList<ItemNotification>
 ) : RecyclerView.Adapter<RccNotificationAdapter.ViewHoler>() {
