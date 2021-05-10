@@ -5,7 +5,7 @@
 
         <variable
             name="itemData"
-            type="com.example.actonline.model.ItemNotification" />
+            type="com.sam.actonline.model.ItemNotification" />
 
     </data>
 

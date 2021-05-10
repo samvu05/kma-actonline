@@ -8,12 +8,15 @@
     <dimen name="dp12">12dp</dimen>
     <dimen name="dp8">8dp</dimen>
 
+    <dimen name="dpSpace">16dp</dimen>
+    <dimen name="dpSpaceHalf">8dp</dimen>
+
     <dimen name="textExtraLarge">32sp</dimen>
     <dimen name="textSemiLarge">22sp</dimen>
     <dimen name="textLarge">26sp</dimen>
 
     <dimen name="textNormalLarge">18sp</dimen>
-    <dimen name="textNormal">16sp</dimen>
+    <dimen name="textNormal">15sp</dimen>
 
     <dimen name="textSmall">14sp</dimen>
     <dimen name="textExtraSmall">12sp</dimen>
@@ -29,4 +32,7 @@
     <dimen name="dp4">4dp</dimen>
     <dimen name="dp40">40dp</dimen>
     <dimen name="dp48">48dp</dimen>
+    <dimen name="dp0">0dp</dimen>
+    <dimen name="dp120">120dp</dimen>
+    <dimen name="dp80">80dp</dimen>
 </resources>

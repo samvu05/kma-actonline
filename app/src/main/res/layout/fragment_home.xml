@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.activity.LoginActivity">
+    tools:context=".view.login.LoginActivity">
 
     <ImageView
         android:id="@+id/layout_header"
@@ -17,10 +17,10 @@
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/txt_appname"
+        android:id="@+id/tv_appname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp32"
+        android:layout_marginTop="@dimen/dp16"
         android:drawablePadding="@dimen/dp8"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/app_name_inapp"
@@ -42,12 +42,26 @@
         android:scaleType="centerCrop"
         android:src="@drawable/ic_close_app"
         android:tint="@color/primary_transparent"
-        app:layout_constraintBottom_toBottomOf="@id/txt_appname"
+        app:layout_constraintBottom_toBottomOf="@id/tv_appname"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/txt_appname" />
+        app:layout_constraintTop_toTopOf="@id/tv_appname" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btn_notification"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_marginStart="@dimen/dp8"
+        android:background="@color/primary_transparent"
+        android:padding="@dimen/dp8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_notification"
+        android:tint="@color/primary_transparent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_appname"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_appname" />
 
     <TextView
-        android:id="@+id/txt_hello"
+        android:id="@+id/tv_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -57,10 +71,10 @@
         android:textSize="@dimen/textNormal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_appname" />
+        app:layout_constraintTop_toBottomOf="@id/tv_appname" />
 
     <TextView
-        android:id="@+id/txt_fullname"
+        android:id="@+id/tv_fullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
@@ -69,27 +83,38 @@
         android:textSize="@dimen/textLarge"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_hello" />
+        app:layout_constraintTop_toBottomOf="@id/tv_hello" />
+    
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/imv_avatar"
+        android:layout_marginStart="@dimen/dp8"
+        android:layout_width="@dimen/dp48"
+        android:layout_height="@dimen/dp48"
+        app:layout_constraintStart_toEndOf="@id/tv_fullname"
+        app:layout_constraintBottom_toBottomOf="@id/tv_fullname"
+        app:layout_constraintTop_toTopOf="@id/tv_fullname"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        android:src="@drawable/img_fill_dark"/>
 
     <TextView
-        android:id="@+id/txt_show_my_course"
+        android:id="@+id/tv_show_my_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp8"
         android:fontFamily="@font/poppins_regular"
-        android:text="Xem khoa hoc"
+        android:text="Xem khoá học"
         android:textColor="@color/text_white"
         android:textSize="@dimen/textNormal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txt_fullname" />
+        app:layout_constraintTop_toBottomOf="@id/tv_fullname" />
 
     <TextView
-        android:id="@+id/txt_func_title"
+        android:id="@+id/tv_func_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp16"
-        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginStart="@dimen/dpSpace"
+        android:layout_marginTop="@dimen/dp24"
         android:fontFamily="@font/poppins_medium"
         android:text="Chức năng chính"
         android:textColor="@color/text_black"
@@ -98,10 +123,10 @@
         app:layout_constraintTop_toBottomOf="@id/layout_header" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/txt_func_edit"
+        android:id="@+id/btn_func_edit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dp16"
+        android:layout_marginEnd="@dimen/dpSpace"
         android:drawableStart="@drawable/ic_edit_for_textview"
         android:drawablePadding="@dimen/dp8"
         android:drawableTint="@color/text_color_primary"
@@ -109,8 +134,29 @@
         android:text="Tuỳ chỉnh"
         android:textColor="@color/text_color_primary"
         android:textSize="@dimen/textNormal"
-        app:layout_constraintBottom_toBottomOf="@id/txt_func_title"
+        app:layout_constraintBottom_toBottomOf="@id/tv_func_title"
         app:layout_constraintEnd_toEndOf="parent"
         tools:targetApi="m" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_func_home"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp0"
+        android:layout_marginHorizontal="@dimen/dpSpaceHalf"
+        android:paddingBottom="@dimen/dp16"
+        app:layout_constraintTop_toBottomOf="@id/tv_func_title" />
+
+    <TextView
+        android:id="@+id/tv_site_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dpSpace"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Thông báo chung"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rcv_func_home" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

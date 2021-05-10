@@ -5,17 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".view.activity.LoginActivity">
+    tools:context=".view.login.LoginActivity">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#78909C"
+        android:background="#37474F"
         android:scaleType="centerCrop"
         tools:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/txt_appname"
+        android:id="@+id/tv_appname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dp32"
@@ -25,10 +25,10 @@
         android:textColor="@color/text_white"
         android:textSize="@dimen/textLarge"
         app:drawableLeftCompat="@drawable/ic_school"
+        app:drawableTint="@color/text_white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:drawableTint="@color/text_white" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imv"
@@ -70,12 +70,12 @@
         android:layout_marginTop="@dimen/dp40"
         android:backgroundTint="@color/text_white"
         android:drawablePadding="@dimen/dp4"
-        android:textColor="@color/text_white"
         android:drawableTint="@color/text_white"
         android:fontFamily="@font/poppins_regular"
         android:hint="@string/username"
         android:outlineSpotShadowColor="@color/text_white"
         android:paddingHorizontal="@dimen/dp16"
+        android:textColor="@color/text_white"
         android:textColorHint="@color/text_white"
         android:textSize="@dimen/textNormal"
         app:drawableLeftCompat="@drawable/ic_person"
@@ -90,11 +90,11 @@
         android:layout_marginTop="@dimen/dp24"
         android:backgroundTint="@color/text_white"
         android:drawablePadding="4dp"
-        android:textColor="@color/text_white"
         android:drawableTint="@color/text_white"
         android:fontFamily="@font/poppins_regular"
         android:hint="@string/password"
         android:paddingHorizontal="@dimen/dp16"
+        android:textColor="@color/text_white"
         android:textColorHint="@color/text_white"
         android:textSize="@dimen/sp16"
         app:drawableLeftCompat="@drawable/ic_password"
@@ -128,56 +128,57 @@
         app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
     <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/box_save_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:checked="true"
-        android:textColor="@color/text_white"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="@dimen/textNormal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/btn_skip"
-        app:layout_constraintBottom_toBottomOf="@id/btn_skip"
         android:layout_marginStart="@dimen/dp32"
-        android:text="@string/forget_password"/>
+        android:checked="true"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/forget_password"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/textNormal"
+        app:layout_constraintBottom_toBottomOf="@id/btn_skip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_skip" />
 
     <TextView
-        android:id="@+id/txt_contact_name"
+        android:id="@+id/tv_contact_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_regular"
         android:text="@string/site_name"
         android:textColor="@color/text_white"
         android:textSize="@dimen/textNormal"
-        app:layout_constraintBottom_toTopOf="@id/txt_contact_adress"
+        app:layout_constraintBottom_toTopOf="@id/tv_contact_adress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txt_contact_adress"
+        android:id="@+id/tv_contact_adress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
         android:text="@string/site_adress"
         android:textColor="@color/text_white_75"
         android:textSize="@dimen/textExtraSmall"
-        app:layout_constraintBottom_toTopOf="@id/txt_contact_phone"
+        app:layout_constraintBottom_toTopOf="@id/tv_contact_phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txt_contact_phone"
+        android:id="@+id/tv_contact_phone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_light"
         android:text="@string/site_telephone"
         android:textColor="@color/text_white_75"
         android:textSize="@dimen/textExtraSmall"
-        app:layout_constraintBottom_toTopOf="@id/txt_contact_website"
+        app:layout_constraintBottom_toTopOf="@id/tv_contact_website"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txt_contact_website"
+        android:id="@+id/tv_contact_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/dp32"

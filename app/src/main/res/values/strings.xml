@@ -18,4 +18,16 @@
     <string name="site_adress">Add: 141 đường Chiến Thắng, Tân Triều, Thanh Trì, Hà Nội</string>
     <string name="site_telephone">Tel: 04.38544244</string>
     <string name="site_website">Website: www.actvn.edu.vn</string>
+    <string name="maps_direction">Tìm đường đến trường</string>
+    <string name="txt_edit_function">Tuỳ chỉnh tính năng</string>
+    <string name="edit">Tuỳ chỉnh</string>
+    <string name="ok">Đồng ý</string>
+    <string name="cancel">Huỷ</string>
+    <string name="careful">Cẩn thận</string>
+    <string name="restore_setting_decs">Bạn có chắc chắn muốn khôi phục cài đặt về trạng thái ban đầu ?</string>
+    <string name="save">Lưu lại</string>
+    <string name="tips">Mẹo nhỏ</string>
+    <string name="tips_editsetting_decs">Kéo thả các ô để thay đổi vị trí</string>
+    <string name="success">Thành công</string>
+    <string name="saved_edited">Thiết lập thành công !</string>
 </resources>
