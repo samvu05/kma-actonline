@@ -19,7 +19,7 @@
             app:layoutDescription="@xml/activity_course_detail_scene"
             app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
 
-            <Expan
+            <ImageView
                 android:id="@+id/background"
                 android:layout_width="0dp"
                 android:layout_height="400dp"
