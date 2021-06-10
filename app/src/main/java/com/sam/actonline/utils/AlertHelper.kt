@@ -14,8 +14,8 @@ object AlertHelper {
 
     fun showTipAlert(
         context: Context,
-        icon: Int = R.drawable.ic_notification,
-        title: String,
+        icon: Int = R.drawable.ic_event_site,
+        title: String = "Thông báo",
         desc: String,
         onCallback: (() -> Unit)? = null
     ) {

@@ -84,15 +84,28 @@ fun TextView.enableMarque() {
     }
 }
 
-fun String.toDownloadLink1(): String = this + Constant.ADD_LINK_1
-fun String.toDownloadLink2(): String = this + Constant.ADD_LINK_2
+fun String.toDownloadLink(): String =
+    if (this.contains("?")) {
+        this + Constant.ADD_LINK_2
+    } else {
+        this + Constant.ADD_LINK_1
+    }
 
-fun Int.toDateTimeString(): String {
+fun Int.toDateTimeFromTimeStamp(): String {
     try {
         val template = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
         val netDate = Date(this.toLong() * 1000)
         return template.format(netDate)
 
+    } catch (e: Exception) {
+        return e.toString()
+    }
+}
+
+fun Long.toDateTimeFromLong(): String{
+    try {
+        val template = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
+        return template.format(this)
     } catch (e: Exception) {
         return e.toString()
     }

@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/container"
-    style="@style/RccMargin"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_rcc_round_10">
+    android:layout_marginVertical="@dimen/dp_space_0.5"
+    android:background="@drawable/bg_rcc_round_10"
+    android:padding="@dimen/dp8">
 
     <ImageView
-        android:id="@+id/ivModule"
+        android:id="@+id/imv_module"
         android:layout_width="@dimen/dp40"
         android:layout_height="@dimen/dp40"
         android:contentDescription="@null"
-        android:src="@drawable/ic_tv_enddate" />
+        android:src="@drawable/file_excel" />
 
     <TextView
-        android:id="@+id/tvName"
+        android:id="@+id/tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dp8"
-        android:layout_toEndOf="@id/ivModule"
+        android:layout_toStartOf="@id/imv_download"
+        android:layout_toEndOf="@id/imv_module"
         android:fontFamily="@font/font_semibold"
+        android:gravity="center_vertical"
         android:minHeight="@dimen/dp40"
         android:text="@string/default_short_text"
         android:textColor="@color/text_black_title"
         android:textSize="@dimen/text_title" />
 
+    <ImageView
+        android:id="@+id/imv_download"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@null"
+        android:padding="@dimen/dp6"
+        android:src="@drawable/ic_watch_more" />
+
+    <View
+        android:id="@+id/wraper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_alignTop="@id/imv_module"
+        android:layout_alignBottom="@id/imv_module"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        />
+
     <View
         android:id="@+id/line1"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp1"
-        android:layout_below="@id/tvName"
+        android:layout_below="@id/tv_name"
         android:layout_marginTop="@dimen/dp8"
         android:background="#E0E0E0" />
 
     <TextView
-        android:id="@+id/tvDes"
+        android:id="@+id/tv_des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/line1"
@@ -43,4 +66,5 @@
         android:text="@string/default_short_text"
         android:textColor="@color/text_black_content"
         android:textSize="@dimen/text_content" />
+
 </RelativeLayout>

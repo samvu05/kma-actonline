@@ -5,14 +5,23 @@
     android:id="@+id/container"
     style="@style/RccMargin"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:paddingHorizontal="@dimen/dp8"
-    android:paddingTop="@dimen/dp8">
+    android:paddingBottom="@dimen/dp_space"
+    android:layout_height="wrap_content">
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="@dimen/dp4"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_title"
+        android:layout_alignBottom="@id/tv_title"
+        android:background="#2196F3" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_space_0.5"
+        android:layout_toEndOf="@id/line1"
         android:fontFamily="@font/font_bold"
         android:text="@string/default_short_text"
         android:textColor="@color/text_black_title"
@@ -23,6 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_title"
+        android:layout_marginStart="@dimen/dp_space_block"
         android:ellipsize="end"
         android:focusable="true"
         android:fontFamily="@font/font_regular"

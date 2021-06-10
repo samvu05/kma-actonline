@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/RccMargin"
+    android:paddingBottom="@dimen/dp_space_block"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_course"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_space_0.5"
+        android:layout_toEndOf="@id/line1"
+       android:textColor="@color/text_black_title"
+        android:fontFamily="@font/font_semibold"
+        android:textSize="@dimen/text_title_large"
+        android:text="@string/default_short_text" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="@dimen/dp2"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/tv_course"
+        android:layout_alignBottom="@id/tv_course"
+        android:background="#2196F3" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcc_child_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_course"
+        tools:itemCount="4"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_rcc_download_file"
+        android:layout_marginTop="@dimen/dp_space" />
+
+</RelativeLayout>

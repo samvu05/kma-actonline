@@ -59,3 +59,34 @@ fun View.setOnCustomClick(onFinishAnimation: () -> Unit) {
     }
 
 }
+
+fun View.setOnCustomClickAnimPerson(personView: View, onFinishAnimation: () -> Unit) {
+    this.setOnClickListener {
+        it.isClickable = false
+        val mScaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 0.85f)
+        val mScaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 0.85f)
+        val animator: ObjectAnimator =
+            ObjectAnimator.ofPropertyValuesHolder(personView, mScaleX, mScaleY)
+        animator.repeatCount = 1
+        animator.repeatMode = ObjectAnimator.REVERSE
+        animator.duration = 100
+        animator.start()
+
+        animator.addListener(object : Animator.AnimatorListener {
+            override fun onAnimationStart(animation: Animator?) {
+            }
+
+            override fun onAnimationEnd(animation: Animator?) {
+                it.isClickable = true
+                onFinishAnimation()
+            }
+
+            override fun onAnimationCancel(animation: Animator?) {
+            }
+
+            override fun onAnimationRepeat(animation: Animator?) {
+            }
+        })
+    }
+
+}

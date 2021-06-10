@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sam.actonline.databinding.ItemRccCourseBinding
 import com.sam.actonline.extention.setImageFromUrl
 import com.sam.actonline.extention.setTextMarque
-import com.sam.actonline.extention.toDateTimeString
+import com.sam.actonline.extention.toDateTimeFromTimeStamp
 import com.sam.actonline.model.course.ItemCourse
 import com.sam.actonline.utils.Constant
 
@@ -44,12 +44,12 @@ class CoursesAdapter(
             }
 
             tvTitle.setTextMarque(item.fullname)
-            tvStartDate.setTextMarque(item.startdate.toDateTimeString())
-            tvEndDate.setTextMarque(item.enddate.toDateTimeString())
+            tvStartDate.setTextMarque(item.startdate.toDateTimeFromTimeStamp())
+            tvEndDate.setTextMarque(item.enddate.toDateTimeFromTimeStamp())
             tvCountUser.setTextMarque(item.enrolledusercount.toString())
 
             var imvLink = ""
-            if (!item.overviewfiles.isEmpty()) {
+            if (item.overviewfiles.isNotEmpty()) {
                 for (file in item.overviewfiles) {
                     if (file.fileurl.contains(".jpg") || file.fileurl.contains(".png")) {
                         imvLink = file.fileurl + Constant.ADD_LINK_1

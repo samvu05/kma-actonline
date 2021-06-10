@@ -7,6 +7,7 @@ import com.sam.actonline.databinding.ItemRccSectionBinding
 import com.sam.actonline.extention.setHtmlTextClickable
 import com.sam.actonline.model.coursedetail.ItemSection
 import com.sam.actonline.model.coursedetail.Module
+import com.sam.actonline.utils.FileHelper
 
 /**
  * Created by Dinh Sam Vu on 5/16/2021.
@@ -14,7 +15,8 @@ import com.sam.actonline.model.coursedetail.Module
 @Suppress("DEPRECATION")
 class SectionAdapter(
     private var data: MutableList<ItemSection>,
-    private val onModuleClick: (item: Module) -> Unit
+    private val onModuleClick: (item: Module) -> Unit,
+    private val fileHelper: FileHelper
 ) : RecyclerView.Adapter<SectionAdapter.ViewHoler>() {
 
     class ViewHoler(val binding: ItemRccSectionBinding) : RecyclerView.ViewHolder(binding.root)
@@ -32,7 +34,7 @@ class SectionAdapter(
             tvSumary.setHtmlTextClickable(item.summary)
         }
         holder.binding.rccModule.apply {
-            adapter = ModuleAdapter(item.modules, onModuleClick)
+            adapter = ModuleAdapter(item.modules, onModuleClick, fileHelper)
         }
     }
 
@@ -40,6 +42,10 @@ class SectionAdapter(
 
     fun setData(data: MutableList<ItemSection>) {
         data.also { it.also { it.also { this.data = it } } }
+        notifyDataSetChanged()
+    }
+
+    fun reload() {
         notifyDataSetChanged()
     }
 }

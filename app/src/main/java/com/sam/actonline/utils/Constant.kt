@@ -9,5 +9,5 @@ object Constant {
     const val DEAULT_LOGCAT = "logDB"
     const val ADD_LINK_1 = "?token=cfd56c79d5670bd800109d6a2a103bc1"
     const val ADD_LINK_2 = "&token=cfd56c79d5670bd800109d6a2a103bc1"
-    const val DOWNLOADED_FILE_FOLDER = "Downloaded File"
+    const val DOWNLOADED_FILE_FOLDER = "Download"
 }

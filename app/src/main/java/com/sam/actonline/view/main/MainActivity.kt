@@ -1,8 +1,6 @@
 package com.sam.actonline.view.main
 
 import android.os.Bundle
-import android.os.Environment
-import android.util.Log
 import androidx.viewpager.widget.ViewPager
 import com.sam.actonline.R
 import com.sam.actonline.base.BaseActivity
@@ -13,7 +11,6 @@ import com.sam.actonline.view.home.HomeFragment
 import com.sam.actonline.view.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sam.actonline.extention.showLog
-import com.sam.actonline.utils.FileManager
 import com.sam.actonline.view.course.CoursesFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
@@ -39,13 +36,18 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
 
     private fun setupViewPager() {
         mAdapter = ScreenSlidePagerAdapter(this@MainActivity.supportFragmentManager)
-        mAdapter.addFragment(HomeFragment(), "Trang chủ")
-        mAdapter.addFragment(CoursesFragment(), "Khoá học")
-        mAdapter.addFragment(CalendarFragment(), "Lịch")
-        mAdapter.addFragment(ProfileFragment(), "Cá nhân")
-        mViewPager.adapter = mAdapter
-        mViewPager.offscreenPageLimit = mAdapter.count
-        mViewPager.addOnPageChangeListener(this)
+            .apply {
+                addFragment(HomeFragment(), "Trang chủ")
+                addFragment(CoursesFragment(), "Khoá học")
+                addFragment(CalendarFragment(), "Lịch")
+                addFragment(ProfileFragment(), "Cá nhân")
+            }
+
+        mViewPager.apply {
+            adapter = mAdapter
+            offscreenPageLimit = mAdapter.count
+            addOnPageChangeListener(this@MainActivity)
+        }
 
         mBottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
@@ -88,7 +90,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
         if (file.list() == null || file.list().isNullOrEmpty()) {
             showLog("Size Error")
         } else {
-            showLog("File Size: ${file.listFiles().size}")
+            showLog("File Size: ${file.list()?.size ?: ""}")
         }
     }
 

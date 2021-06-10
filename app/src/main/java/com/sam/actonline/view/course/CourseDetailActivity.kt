@@ -6,7 +6,9 @@ import com.google.android.material.appbar.AppBarLayout
 import com.sam.actonline.R
 import com.sam.actonline.base.BaseActivity
 import com.sam.actonline.databinding.ActivityCourseDetailBinding
+import com.sam.actonline.extention.setHtmlTextClickable
 import com.sam.actonline.extention.setImageFromUrl
+import com.sam.actonline.extention.setTextMarque
 import dagger.hilt.android.AndroidEntryPoint
 
 /**
@@ -16,7 +18,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CourseDetailActivity : BaseActivity<ActivityCourseDetailBinding>() {
     private var courseID: Int = -1
-    private var courseName: String = "Site news"
+    private lateinit var courseName: String
 
     companion object {
         const val INTENT_COURSE_ID_KEY = "courseId"
@@ -35,19 +37,23 @@ class CourseDetailActivity : BaseActivity<ActivityCourseDetailBinding>() {
     private fun getIntentData() {
         if (intent == null) return
         courseID = intent.getIntExtra(INTENT_COURSE_ID_KEY, -1)
-        intent.getStringExtra(INTENT_COURSE_NAME).run {
-            courseName = this ?: "Site news"
-        }
-        binding.background.setImageFromUrl(intent.getStringExtra(INTENT_COURSE_IMAGE))
-//        binding.tvDescription.setHtmlTextClickable(
-//            intent.getStringExtra(INTENT_COURSE_DESCRIPTION) ?: "..."
-//        )
+        courseName = intent.getStringExtra(INTENT_COURSE_NAME) ?: ""
+
+        binding.background.setImageFromUrl(
+            intent.getStringExtra(
+                INTENT_COURSE_IMAGE
+            )
+        )
+        binding.tvTitle.setTextMarque(courseName)
+        binding.tvDescription.setHtmlTextClickable(
+            intent.getStringExtra(INTENT_COURSE_DESCRIPTION) ?: "..."
+        )
     }
 
     private fun setCourseContentFragment() {
         val fragmentTransaction = supportFragmentManager.beginTransaction()
         val courseSectionFragment = CourseContentFragment.newInstance(
-            courseID
+            courseID, courseName
         )
         fragmentTransaction.replace(
             R.id.frame_container,

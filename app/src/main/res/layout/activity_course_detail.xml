@@ -19,7 +19,7 @@
             app:layoutDescription="@xml/activity_course_detail_scene"
             app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
 
-            <ImageView
+            <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/background"
                 android:layout_width="0dp"
                 android:layout_height="400dp"
@@ -28,8 +28,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/img_background_appbar"
-                tools:ignore="ContentDescription" />
+                app:srcCompat="@drawable/img_background_appbar" />
 
             <TextView
                 android:id="@+id/tv_title"
@@ -108,8 +107,8 @@
                 app:layout_constraintStart_toStartOf="@id/tv_description_title"
                 app:layout_constraintTop_toBottomOf="@id/tv_description_title" />
 
-
             <FrameLayout
+                android:layout_marginTop="@dimen/dp_space_block"
                 android:id="@+id/frame_container"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

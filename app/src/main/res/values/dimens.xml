@@ -43,4 +43,6 @@
     <dimen name="dp10">10dp</dimen>
     <dimen name="dp2">2dp</dimen>
     <dimen name="dp1">1dp</dimen>
+    <dimen name="dp50">50dp</dimen>
+    <dimen name="text_comment_extra">11sp</dimen>
 </resources>

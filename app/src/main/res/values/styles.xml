@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!--    RecyclerView item margin-->
     <style name="RccMargin">
         <item name="android:layout_marginBottom">@dimen/dp_space_0.5</item>
         <item name="android:layout_marginLeft">@dimen/dp_space</item>
         <item name="android:layout_marginRight">@dimen/dp_space</item>
         <item name="android:layout_marginTop">@dimen/dp_space_0.5</item>
+    </style>
+
+    <style name="TextViewTitle">
+        <item name="fontFamily">@font/font_semibold</item>
+        <item name="android:textColor">@color/text_black_title</item>
+        <item name="android:textSize">@dimen/text_title</item>
+    </style>
+
+    <style name="TextViewContent">
+        <item name="fontFamily">@font/font_regular</item>
+        <item name="android:textColor">@color/text_black_content</item>
+        <item name="android:textSize">@dimen/text_content</item>
     </style>
 
     <!-- calendar view custom style -->

@@ -16,6 +16,7 @@ import com.sam.actonline.model.Function
 import com.sam.actonline.model.event.ItemEvent
 import com.sam.actonline.utils.PrefHelper
 import com.sam.actonline.utils.enum.HomeFunctionType
+import com.sam.actonline.view.download.DownloadedBSF
 import com.sam.actonline.view.eventdetail.EventDetailBSF
 import com.sam.actonline.view.home.adapter.HomeFuncAdapter
 import com.sam.actonline.view.home.adapter.RccEventAdapter
@@ -54,6 +55,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         binding.apply {
             btnFuncEdit.setOnClickListener {
                 startActivity(Intent(requireContext(), HomeFunctionSortActivity::class.java))
+            }
+            btnCloseApp.setOnCustomClick {
+                val bsFDownloaded = DownloadedBSF()
+                bsFDownloaded.show(childFragmentManager, bsFDownloaded.tag)
             }
         }
     }

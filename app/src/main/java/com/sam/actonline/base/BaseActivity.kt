@@ -1,18 +1,13 @@
 package com.sam.actonline.base
 
-import android.app.Activity
-import android.content.Context
-import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.viewbinding.ViewBinding
-import com.sam.actonline.events.OnPermissionsListener
+import com.sam.actonline.event.OnPermissionsListener
 import com.sam.actonline.extention.getBinding
-import com.sam.actonline.extention.showToast
 
 /**
  * Created by Dinh Sam Vu on 4/3/2021.

@@ -34,7 +34,7 @@ data class Module(
     val modname: String,
 
     @SerializedName("description")
-    val description: String,
+    val description: String?,
 
     @SerializedName("contents")
     val contents: List<Content>
@@ -46,12 +46,23 @@ data class Module(
 
     val moduleIcon: Int
         get() {
-            return when (getModuleType()){
-                Type.DEFAULT -> R.drawable.ic_notification
-                Type.RESOURCE -> R.drawable.ic_module_default
-                else -> R.drawable.ic_event_site
+            return when (getModuleType()) {
+                Type.DEFAULT -> R.drawable.ic_sticky_note
+                Type.RESOURCE -> R.drawable.ic_powerpoint
+                Type.FOLDER -> R.drawable.ic_folder
+                Type.BOOK -> R.drawable.ic_book
+                Type.FORUM -> R.drawable.ic_forum
+                Type.QUIZ -> R.drawable.ic_quiz
+                Type.ASSIGNMENT -> R.drawable.ic_assignment
+                Type.URL -> R.drawable.ic_link
+                else -> R.drawable.ic_sticky_note
             }
         }
+
+    val canDownload: Boolean
+        get() = !contents.isNullOrEmpty() && getModuleType() in arrayOf(
+            Type.RESOURCE
+        )
 
     fun getModuleType(): Type {
         return when (modname.lowercase(Locale.ROOT)) {

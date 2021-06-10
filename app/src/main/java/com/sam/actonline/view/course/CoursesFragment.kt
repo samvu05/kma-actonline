@@ -22,13 +22,10 @@ class CoursesFragment : BaseFragment<FragmentCoursesBinding>() {
     private val mAdapter by lazy { CoursesAdapter(mutableListOf(), onCourseClick) }
     private val model: CourseVM by viewModels()
 
-    @Inject
-    lateinit var prefHelper: PrefHelper
-
     override fun initView(view: View) {
         setupRcc()
-        model.getListCourse()
         obsever()
+        model.getListCourse()
     }
 
     private fun setupRcc() {

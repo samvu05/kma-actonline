@@ -2,17 +2,17 @@ package com.sam.actonline.view.course
 
 import android.view.View
 import android.widget.Toast
-import androidx.annotation.MainThread
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.sam.actonline.R
 import com.sam.actonline.base.BaseFragment
 import com.sam.actonline.databinding.FragmentCourseContentBinding
+import com.sam.actonline.extention.showToast
 import com.sam.actonline.extention.startBrowser
+import com.sam.actonline.extention.toDownloadLink
 import com.sam.actonline.model.coursedetail.ItemSection
 import com.sam.actonline.model.coursedetail.Module
 import com.sam.actonline.utils.AlertHelper
-import com.sam.actonline.utils.FileManager
+import com.sam.actonline.utils.FileHelper
 import com.sam.actonline.utils.Utils
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,37 +22,34 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class CourseContentFragment : BaseFragment<FragmentCourseContentBinding>() {
     private var courseID: Int = -1
-    private var coursename = "Hello"
-    private lateinit var fileManager: FileManager
+    private var courseName = ""
 
     private val model: CourseVM by viewModels()
-
-    private val mAdapter by lazy {
-        SectionAdapter(
-            mutableListOf(),
-            onModuleClick = onModuleClick
-        )
-    }
+    private lateinit var fileHelper: FileHelper
+    private lateinit var mAdapter: SectionAdapter
 
     companion object {
         @JvmStatic
-        fun newInstance(courseID: Int) = CourseContentFragment().apply {
+        fun newInstance(courseID: Int, courseName: String) = CourseContentFragment().apply {
             this.courseID = courseID
+            this.courseName = courseName
         }
     }
 
     override fun initView(view: View) {
+        fileHelper = FileHelper(requireActivity(), courseName) {
+            onDownloadFinish(it)
+        }
+        mAdapter = SectionAdapter(mutableListOf(), onModuleClick = onModuleClick, fileHelper)
+        fileHelper.registerDownloadReceiver()
+
         setupRcc()
         obsever()
+
         if (courseID != -1) {
             model.getCourseDetail(courseID)
         }
-        fileManager = FileManager(requireActivity(), coursename) {
-            setCourseContentsOnAdapter()
-        }
-        fileManager.registerDownloadReceiver()
     }
-
 
     private fun obsever() {
         model.courseContent.observe(this@CourseContentFragment, {
@@ -61,22 +58,22 @@ class CourseContentFragment : BaseFragment<FragmentCourseContentBinding>() {
     }
 
     private fun setupRcc() {
-        binding.rcc.apply {
+        binding.rccSection.apply {
             adapter = mAdapter
             layoutManager = LinearLayoutManager(requireContext())
             hasFixedSize()
         }
     }
 
-    @MainThread
-    private fun setCourseContentsOnAdapter() {
-        fileManager.reloadFileList()
+    private val onDownloadFinish: (filename: String) -> Unit = {
+        fileHelper.reloadFileList()
+        mAdapter.reload()
     }
 
     private val onModuleClick: (module: Module) -> Unit = {
-        val module = it as Module
-//        val activity = this@CourseDetailActivity
+        val module = it
         val content = if (!module.contents.isNullOrEmpty()) module.contents.first() else null
+
         when (module.getModuleType()) {
             Module.Type.URL -> if (content != null) {
                 val url = content.fileurl
@@ -93,32 +90,28 @@ class CourseContentFragment : BaseFragment<FragmentCourseContentBinding>() {
 //                    .commit()
             }
             Module.Type.LABEL -> {
-                if (module.description.isNotBlank()) {
+                if (!module.description.isNullOrBlank()) {
                     AlertHelper.showTipAlert(
                         context = requireContext(),
-                        icon = R.drawable.ic_notification,
-                        title = "Nội dung nhãn",
+                        title = "Nội dung LABEL",
                         desc = Utils.getHtmlText(module.description)
                     )
                 }
             }
             Module.Type.RESOURCE -> if (content != null) {
-                if (fileManager.isModuleContentDownloaded(content)) {
-                    fileManager.openModuleContent(content)
+                if (fileHelper.isModuleContentDownloaded(content)) {
+                    fileHelper.openModuleContent(content)
                 } else {
-                    Toast.makeText(
-                        getActivity(), "Downloading file - " + content.filename,
-                        Toast.LENGTH_SHORT
-                    ).show()
-                    fileManager.downloadModuleContent(content, module)
+                    showToast("Đang tải xuống File - " + content.filename)
+                    fileHelper.downloadModuleContent(content, module)
                 }
             }
-            else -> startBrowser(module.url)
+            else -> startBrowser(module.url.toDownloadLink())
         }
     }
 
     override fun onDestroy() {
-        fileManager.unregisterDownloadReceiver()
+        fileHelper.unregisterDownloadReceiver()
         super.onDestroy()
     }
 }
