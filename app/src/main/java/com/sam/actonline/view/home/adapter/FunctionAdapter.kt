@@ -7,20 +7,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eup.jaemy.ui.setting.event.ItemTouchHelperAdapter
 import com.sam.actonline.R
 import com.sam.actonline.databinding.ItemFunctionHomeTitleBinding
-import com.sam.actonline.model.ItemFunction
+import com.sam.actonline.model.Function
 import java.util.*
 
 /**
  * Created by Dinh Sam Vu on 4/8/2021.
  */
 class FunctionAdapter(
-    private val sortedCallback: (sortedID: String) -> Unit, ) :
+    private val sortedCallback: (sortedID: String) -> Unit,
+) :
     RecyclerView.Adapter<FunctionAdapter.ViewHolder>(), ItemTouchHelperAdapter {
 
-    private var listItem = mutableListOf<ItemFunction>()
+    private var listItem = mutableListOf<Function>()
     private var isEditMode: Boolean = false
 
-    class ViewHolder(val binding: ItemFunctionHomeTitleBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding: ItemFunctionHomeTitleBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemFunctionHomeTitleBinding.inflate(
@@ -39,7 +41,7 @@ class FunctionAdapter(
             if (!isEditMode) {
                 if (position in 0..3) {
                     txtTitleFunction.setTextColor(Color.parseColor("#FFFFFF"))
-                    background.setBackgroundResource(R.color.text_color_primary_75)
+                    background.setBackgroundResource(R.color.text_white_content)
                 } else {
                     txtTitleFunction.setTextColor(Color.parseColor("#0783EF"))
                     background.setBackgroundResource(R.color.white)
@@ -51,7 +53,7 @@ class FunctionAdapter(
         }
     }
 
-    fun updateData(listSearch: MutableList<ItemFunction>) {
+    fun updateData(listSearch: MutableList<Function>) {
         this.listItem.clear()
         this.listItem.addAll(listSearch)
         notifyDataSetChanged()

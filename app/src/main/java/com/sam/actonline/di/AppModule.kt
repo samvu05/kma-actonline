@@ -28,15 +28,15 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
+    @Provides
+    fun providesPreferences(@ApplicationContext context: Context): PrefHelper {
+        return PrefHelper(context.getSharedPreferences(PrefHelper.APP_PREFS, Context.MODE_PRIVATE))
+    }
+
     @Singleton
     @Provides
     fun provideApplication(@ApplicationContext app: Context): BaseApplication {
         return app as BaseApplication
-    }
-
-    @Provides
-    fun providesPreferences(@ApplicationContext context: Context): PrefHelper {
-        return PrefHelper(context.getSharedPreferences(PrefHelper.APP_PREFS, Context.MODE_PRIVATE))
     }
 
     @Provides
@@ -49,7 +49,6 @@ object AppModule {
             .fallbackToDestructiveMigration()
             .build()
     }
-
 
     @Singleton
     @Provides

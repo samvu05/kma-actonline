@@ -47,59 +47,59 @@ abstract class BaseActivity<V : ViewBinding> : AppCompatActivity() {
         )
     }
 
-    private fun hasPermissions(
-        activityContext: Context?,
-        vararg permissions: String
-    ): Boolean {
-        if (activityContext != null) {
-            for (permission in permissions) {
-                if (ActivityCompat.checkSelfPermission(
-                        activityContext,
-                        permission
-                    ) != PackageManager.PERMISSION_GRANTED
-                ) {
-                    return false
-                }
-            }
-        } else {
-            showToast("Context null")
-            return false
-        }
-        return true
-    }
-
-    fun checkAndRequestPermission(
-        activityContext: Context,
-        reqCode: Int,
-        callback: () -> Unit,
-        vararg arrPermission: String
-    ) {
-        if (activityContext is Activity) {
-            if (!hasPermissions(activityContext, *arrPermission)) {
-                ActivityCompat.requestPermissions(
-                    activityContext,
-                    arrPermission,
-                    reqCode
-                )
-            } else {
-                callback()
-            }
-        } else {
-            showToast("Error null context permission ! ")
-        }
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        this.permissions?.onPermissions(requestCode, permissions, grantResults)
-    }
-
-    fun setOnPermissionsListener(permissions: OnPermissionsListener?) {
-        this.permissions = permissions
-    }
+//    private fun hasPermissions(
+//        activityContext: Context?,
+//        vararg permissions: String
+//    ): Boolean {
+//        if (activityContext != null) {
+//            for (permission in permissions) {
+//                if (ActivityCompat.checkSelfPermission(
+//                        activityContext,
+//                        permission
+//                    ) != PackageManager.PERMISSION_GRANTED
+//                ) {
+//                    return false
+//                }
+//            }
+//        } else {
+//            showToast("Context null")
+//            return false
+//        }
+//        return true
+//    }
+//
+//    fun checkAndRequestPermission(
+//        activityContext: Context,
+//        reqCode: Int,
+//        callback: () -> Unit,
+//        vararg arrPermission: String
+//    ) {
+//        if (activityContext is Activity) {
+//            if (!hasPermissions(activityContext, *arrPermission)) {
+//                ActivityCompat.requestPermissions(
+//                    activityContext,
+//                    arrPermission,
+//                    reqCode
+//                )
+//            } else {
+//                callback()
+//            }
+//        } else {
+//            showToast("Error null context permission ! ")
+//        }
+//    }
+//
+//    override fun onRequestPermissionsResult(
+//        requestCode: Int,
+//        permissions: Array<out String>,
+//        grantResults: IntArray
+//    ) {
+//        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+//        this.permissions?.onPermissions(requestCode, permissions, grantResults)
+//    }
+//
+//    fun setOnPermissionsListener(permissions: OnPermissionsListener?) {
+//        this.permissions = permissions
+//    }
 
 }

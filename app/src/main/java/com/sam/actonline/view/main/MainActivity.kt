@@ -1,6 +1,8 @@
 package com.sam.actonline.view.main
 
 import android.os.Bundle
+import android.os.Environment
+import android.util.Log
 import androidx.viewpager.widget.ViewPager
 import com.sam.actonline.R
 import com.sam.actonline.base.BaseActivity
@@ -8,10 +10,13 @@ import com.sam.actonline.databinding.ActivityMainBinding
 import com.sam.actonline.view.adapter.ScreenSlidePagerAdapter
 import com.sam.actonline.view.calendar.CalendarFragment
 import com.sam.actonline.view.home.HomeFragment
-import com.sam.actonline.view.notification.NotificationFragment
 import com.sam.actonline.view.profile.ProfileFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.sam.actonline.extention.showLog
+import com.sam.actonline.utils.FileManager
+import com.sam.actonline.view.course.CoursesFragment
 import dagger.hilt.android.AndroidEntryPoint
+import java.io.File
 
 @AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChangeListener {
@@ -29,13 +34,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
         mViewPager = findViewById(R.id.viewpaper_home)
         mBottomNavigation = findViewById(R.id.nav_bottom_home)
         setupViewPager()
+        checkListFile()
     }
 
     private fun setupViewPager() {
         mAdapter = ScreenSlidePagerAdapter(this@MainActivity.supportFragmentManager)
         mAdapter.addFragment(HomeFragment(), "Trang chủ")
-        mAdapter.addFragment(CalendarFragment(), "Thời khoá biểu")
-        mAdapter.addFragment(NotificationFragment(), "Thông báo")
+        mAdapter.addFragment(CoursesFragment(), "Khoá học")
+        mAdapter.addFragment(CalendarFragment(), "Lịch")
         mAdapter.addFragment(ProfileFragment(), "Cá nhân")
         mViewPager.adapter = mAdapter
         mViewPager.offscreenPageLimit = mAdapter.count
@@ -43,9 +49,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
 
         mBottomNavigation.setOnNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.navbot_item_home -> mViewPager.currentItem = 0
-                R.id.nav_bottom_calendar -> mViewPager.currentItem = 1
-                R.id.navbot_item_notification -> mViewPager.currentItem = 2
+                R.id.nav_main_home -> mViewPager.currentItem = 0
+                R.id.nav_main_course -> mViewPager.currentItem = 1
+                R.id.nav_main_calendar -> mViewPager.currentItem = 2
                 R.id.navbot_item_profile -> mViewPager.currentItem = 3
             }
             true
@@ -60,6 +66,30 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
     }
 
     override fun onPageScrollStateChanged(state: Int) {
+    }
+
+    private fun checkListFile() {
+        val ROOT_FOLDER = "ACT Elearning"
+        val baseDirectory: String =
+            this@MainActivity.getExternalFilesDir(null)!!.path + File.separator + ROOT_FOLDER + File.separator + "Hello"
+        val file = File(baseDirectory)
+
+        showLog("Is direc: ${file.isDirectory}")
+        showLog("name: ${file.name}")
+        showLog("Path: ${file.path}")
+        showLog("listFiles: ${file.listFiles()}")
+        showLog("absoluteFile: ${file.absoluteFile}")
+        showLog("canonicalFile: ${file.canonicalFile}")
+        showLog("totalSpace: ${file.totalSpace}")
+        showLog("lastModified: ${file.lastModified()}")
+        showLog("freeSpace: ${file.freeSpace}")
+
+
+        if (file.list() == null || file.list().isNullOrEmpty()) {
+            showLog("Size Error")
+        } else {
+            showLog("File Size: ${file.listFiles().size}")
+        }
     }
 
 }

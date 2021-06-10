@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    style="@style/RccMargin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_rcc_round_10">
+
+    <ImageView
+        android:id="@+id/ivModule"
+        android:layout_width="@dimen/dp40"
+        android:layout_height="@dimen/dp40"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_tv_enddate" />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp8"
+        android:layout_toEndOf="@id/ivModule"
+        android:fontFamily="@font/font_semibold"
+        android:minHeight="@dimen/dp40"
+        android:text="@string/default_short_text"
+        android:textColor="@color/text_black_title"
+        android:textSize="@dimen/text_title" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp1"
+        android:layout_below="@id/tvName"
+        android:layout_marginTop="@dimen/dp8"
+        android:background="#E0E0E0" />
+
+    <TextView
+        android:id="@+id/tvDes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/font_regular"
+        android:text="@string/default_short_text"
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_content" />
+</RelativeLayout>

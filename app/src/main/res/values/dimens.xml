@@ -8,18 +8,18 @@
     <dimen name="dp12">12dp</dimen>
     <dimen name="dp8">8dp</dimen>
 
-    <dimen name="dpSpace">16dp</dimen>
-    <dimen name="dpSpaceHalf">8dp</dimen>
+    <dimen name="dp_space_block">20dp</dimen>
+    <dimen name="dp_space_title">8dp</dimen>
 
-    <dimen name="textExtraLarge">32sp</dimen>
-    <dimen name="textSemiLarge">22sp</dimen>
-    <dimen name="textLarge">26sp</dimen>
+    <dimen name="dp_space">8dp</dimen>
+    <dimen name="dp_space_0.5">4dp</dimen>
+    <dimen name="dp_space_0.25">2dp</dimen>
 
-    <dimen name="textNormalLarge">18sp</dimen>
-    <dimen name="textNormal">15sp</dimen>
-
-    <dimen name="textSmall">14sp</dimen>
-    <dimen name="textExtraSmall">12sp</dimen>
+    <dimen name="text_title_extra">26sp</dimen>
+    <dimen name="text_title_large">20sp</dimen>
+    <dimen name="text_title">17sp</dimen>
+    <dimen name="text_content">15sp</dimen>
+    <dimen name="text_comment">13sp</dimen>
 
     <dimen name="sp64">64sp</dimen>
     <dimen name="sp32">32sp</dimen>
@@ -35,4 +35,12 @@
     <dimen name="dp0">0dp</dimen>
     <dimen name="dp120">120dp</dimen>
     <dimen name="dp80">80dp</dimen>
+    <dimen name="dp320">320dp</dimen>
+    <dimen name="dp200">200dp</dimen>
+    <dimen name="dp6">6dp</dimen>
+    <dimen name="dp13">13dp</dimen>
+    <dimen name="dp20">20dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp2">2dp</dimen>
+    <dimen name="dp1">1dp</dimen>
 </resources>

@@ -7,7 +7,6 @@ import com.sam.actonline.R
 import com.sam.actonline.base.BaseFragment
 import com.sam.actonline.databinding.FragmentNotificationBinding
 import com.sam.actonline.model.ItemNotification
-import com.sam.actonline.view.adapter.RccNotificationAdapter
 
 /**
  * Created by Dinh Sam Vu on 3/3/2021.

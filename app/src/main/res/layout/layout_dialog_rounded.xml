@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp16">
+
+        <ImageView
+            android:id="@+id/imvDialog"
+            android:layout_width="@dimen/dp320"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/txtDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imvDialog"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/font_semibold"
+            android:gravity="center"
+            android:text="@string/restore_setting_decs"
+            android:textSize="@dimen/text_content" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="@dimen/dp40"
+            android:layout_height="@dimen/dp40"
+            android:layout_alignParentEnd="true"
+            android:background="@color/primary_transparent"
+            android:src="@drawable/ic_close"
+            android:tint="@color/primary" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAction1"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtDialog"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp8"
+            android:backgroundTint="@color/primary_dark"
+            android:fontFamily="@font/font_bold"
+            android:text="OK"
+            android:textAllCaps="false"
+            android:textColor="@color/text_white_title"
+            app:cornerRadius="@dimen/dp8"
+            app:rippleColor="@color/white" />
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

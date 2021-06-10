@@ -9,9 +9,8 @@ import com.sam.actonline.R
 import com.sam.actonline.base.BaseActivity
 import com.sam.actonline.databinding.ActivityEditFuncHomeBinding
 import com.sam.actonline.extention.getListHomeFunction
-import com.sam.actonline.model.ItemFunction
+import com.sam.actonline.model.Function
 import com.sam.actonline.utils.AlertHelper
-import java.util.*
 
 /**
  * Created by Dinh Sam Vu on 4/6/2021.
@@ -20,7 +19,7 @@ class HomeFunctionSortActivity : BaseActivity<ActivityEditFuncHomeBinding>() {
     private var mAdapter: FunctionAdapter? = null
     private var itemTouchHelper: ItemTouchHelper? = null
     private var isEditMode = false
-    private var functionListAll: MutableList<ItemFunction> = mutableListOf()
+    private var functionListAll: MutableList<Function> = mutableListOf()
     private var sorted = ""
 
     override fun initView() {
@@ -77,12 +76,11 @@ class HomeFunctionSortActivity : BaseActivity<ActivityEditFuncHomeBinding>() {
                 this@HomeFunctionSortActivity,
                 R.drawable.ic_tips,
                 getString(R.string.tips),
-                getString(R.string.tips_editsetting_decs),
-                onCallback = {
-                }
-            )
+                getString(R.string.tips_editsetting_decs)
+            ) {
+            }
         } else {
-            binding.btnEditFunctions.text = getString(R.string.txt_edit_function)
+            binding.btnEditFunctions.text = getString(R.string.edit_function)
         }
         mAdapter?.switchEditMode(isEditMode)
     }
@@ -95,10 +93,9 @@ class HomeFunctionSortActivity : BaseActivity<ActivityEditFuncHomeBinding>() {
                 this@HomeFunctionSortActivity,
                 R.drawable.ic_done_48,
                 getString(R.string.success),
-                getString(R.string.saved_edited),
-                onCallback = {
-                }
-            )
+                getString(R.string.saved_edited)
+            ) {
+            }
         }
     }
 
@@ -123,7 +120,7 @@ class HomeFunctionSortActivity : BaseActivity<ActivityEditFuncHomeBinding>() {
     }
 
     private fun updateAdapterData() {
-        val sortedFunctionList = mutableListOf<ItemFunction>()
+        val sortedFunctionList = mutableListOf<Function>()
 //        val sortedFunctionID: List<String> = preferencesHelper.sortedFunctions.split("")
 //        for (ID in sortedFunctionID) {
 //            if (ID == "") continue

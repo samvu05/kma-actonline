@@ -14,16 +14,18 @@ object AlertHelper {
 
     fun showTipAlert(
         context: Context,
-        icon: Int,
+        icon: Int = R.drawable.ic_notification,
         title: String,
         desc: String,
-        onCallback: () -> Unit
+        onCallback: (() -> Unit)? = null
     ) {
-        val dialog = MaterialAlertDialogBuilder(context)
+        val dialog = MaterialAlertDialogBuilder(context, R.style.RoundShapeTheme)
         dialog.setTitle(title)
             .setMessage(desc)
             .setPositiveButton(R.string.ok) { _, _ ->
-                onCallback()
+                if (onCallback != null) {
+                    onCallback()
+                }
             }
             .setIcon(icon)
             .setCancelable(false)
@@ -50,8 +52,6 @@ object AlertHelper {
         showDialog(dialog) {
         }
     }
-
-    /* -----------  SHOW DIALOG   ---------- */
 
     private fun showDialog(dialog: MaterialAlertDialogBuilder, callback: (a: AlertDialog) -> Unit) {
         val attributes: WindowManager.LayoutParams?

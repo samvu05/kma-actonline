@@ -10,7 +10,7 @@
     </data>
 
     <RelativeLayout
-        style="@style/roundRectStyleItemNews"
+        style="@style/RccMargin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/bg_rec_white"
@@ -29,13 +29,13 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dp8"
             android:layout_toEndOf="@id/imv_item_rcc"
-            android:fontFamily="@font/poppins_regular"
+            android:fontFamily="@font/font_regular"
             android:ellipsize="end"
             android:singleLine="false"
             android:maxLines="2"
             android:textColor="@color/black"
             android:text="@string/default_notification_title"
-            android:textSize="@dimen/textExtraLarge" />
+            android:textSize="@dimen/text_title" />
 
         <TextView
             android:id="@+id/tv_email_item_rcc"
@@ -46,7 +46,7 @@
             android:layout_marginTop="@dimen/dp4"
             android:layout_toEndOf="@id/imv_item_rcc"
             android:ellipsize="end"
-            android:fontFamily="@font/poppins_light"
+            android:fontFamily="@font/font_light"
             android:maxLines="2"
             android:text="@string/default_notification_decs"
             android:singleLine="false"
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:drawableLeft="@drawable/ic_baseline_access_time_24"
-                android:fontFamily="@font/poppins_regular"
+                android:fontFamily="@font/font_regular"
                 android:drawablePadding="3dp"
                 android:text="05/05/2021"
                 android:textSize="10sp" />

@@ -1,162 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".view.login.LoginActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/layout_header"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:background="#78909C"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="ContentDescription" />
+        android:layout_height="250dp">
 
-    <TextView
-        android:id="@+id/tv_appname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp16"
-        android:drawablePadding="@dimen/dp8"
-        android:fontFamily="@font/poppins_bold"
-        android:text="@string/app_name_inapp"
-        android:textColor="@color/text_white"
-        android:textSize="@dimen/textLarge"
-        app:drawableLeftCompat="@drawable/ic_school"
-        app:drawableTint="@color/text_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.motion.widget.MotionLayout
+            android:id="@+id/motionlayout_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:minHeight="@dimen/dp64"
+            android:orientation="vertical"
+            app:layoutDescription="@xml/fragment_home_scene"
+            app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_close_app"
-        android:layout_width="@dimen/dp40"
-        android:layout_height="@dimen/dp40"
-        android:layout_marginEnd="@dimen/dp8"
-        android:background="@color/primary_transparent"
-        android:padding="@dimen/dp8"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_close_app"
-        android:tint="@color/primary_transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_appname"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_appname" />
+            <TextView
+                android:id="@+id/tv_appname"
+                android:layout_width="wrap_content"
+                android:layout_height="?actionBarSize"
+                android:drawablePadding="@dimen/dp8"
+                android:fontFamily="@font/font_semibold"
+                android:gravity="center_vertical"
+                android:text="@string/app_name_inapp"
+                android:textColor="@color/text_white_title"
+                android:textSize="@dimen/text_title_large"
+                app:drawableTint="@color/text_white_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/btn_notification"
-        android:layout_width="@dimen/dp40"
-        android:layout_height="@dimen/dp40"
-        android:layout_marginStart="@dimen/dp8"
-        android:background="@color/primary_transparent"
-        android:padding="@dimen/dp8"
-        android:scaleType="centerCrop"
-        android:src="@drawable/ic_notification"
-        android:tint="@color/primary_transparent"
-        app:layout_constraintBottom_toBottomOf="@id/tv_appname"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_appname" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_close_app"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:background="@color/primary_transparent"
+                android:padding="@dimen/dp16"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_close_app"
+                android:tint="@color/primary_transparent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_appname"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_appname" />
 
-    <TextView
-        android:id="@+id/tv_hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Xin chào,"
-        android:textColor="@color/text_white"
-        android:textSize="@dimen/textNormal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_appname" />
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_notification"
+                android:layout_width="?actionBarSize"
+                android:layout_height="?actionBarSize"
+                android:background="@color/primary_transparent"
+                android:padding="@dimen/dp16"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_notification"
+                android:tint="@color/primary_transparent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_appname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_appname" />
 
-    <TextView
-        android:id="@+id/tv_fullname"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:text="VU DINH SAM"
-        android:textColor="@color/text_white"
-        android:textSize="@dimen/textLarge"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_hello" />
-    
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imv_avatar"
-        android:layout_marginStart="@dimen/dp8"
-        android:layout_width="@dimen/dp48"
-        android:layout_height="@dimen/dp48"
-        app:layout_constraintStart_toEndOf="@id/tv_fullname"
-        app:layout_constraintBottom_toBottomOf="@id/tv_fullname"
-        app:layout_constraintTop_toTopOf="@id/tv_fullname"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
-        android:src="@drawable/img_fill_dark"/>
+            <TextView
+                android:id="@+id/tv_hello"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/text_title"
+                android:fontFamily="@font/font_regular"
+                android:text="Xin chào,"
+                android:textColor="@color/text_white_title"
+                android:textSize="@dimen/text_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_appname"
+                tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/tv_show_my_course"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp8"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Xem khoá học"
-        android:textColor="@color/text_white"
-        android:textSize="@dimen/textNormal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_fullname" />
+            <TextView
+                android:id="@+id/tv_fullname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_semibold"
+                android:gravity="center"
+                android:text="VU DINH SAM"
+                android:textColor="@color/text_white_title"
+                android:textSize="@dimen/text_title_large"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imv_avatar"
+                tools:ignore="HardcodedText" />
 
-    <TextView
-        android:id="@+id/tv_func_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dpSpace"
-        android:layout_marginTop="@dimen/dp24"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Chức năng chính"
-        android:textColor="@color/text_black"
-        android:textSize="@dimen/textNormal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/layout_header" />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imv_avatar"
+                android:layout_width="@dimen/dp80"
+                android:layout_height="@dimen/dp80"
+                android:padding="@dimen/dp6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hello"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+                app:strokeColor="#99FFFFFF"
+                app:strokeWidth="4dp" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/btn_func_edit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/dpSpace"
-        android:drawableStart="@drawable/ic_edit_for_textview"
-        android:drawablePadding="@dimen/dp8"
-        android:drawableTint="@color/text_color_primary"
-        android:fontFamily="@font/poppins_regular"
-        android:text="Tuỳ chỉnh"
-        android:textColor="@color/text_color_primary"
-        android:textSize="@dimen/textNormal"
-        app:layout_constraintBottom_toBottomOf="@id/tv_func_title"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:targetApi="m" />
+            <TextView
+                android:id="@+id/tv_show_my_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/font_light"
+                android:text="Xem hồ sơ"
+                android:textColor="@color/text_white_title"
+                android:textSize="@dimen/text_comment"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fullname"
+                tools:ignore="HardcodedText" />
+        </androidx.constraintlayout.motion.widget.MotionLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcv_func_home"
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp0"
-        android:layout_marginHorizontal="@dimen/dpSpaceHalf"
-        android:paddingBottom="@dimen/dp16"
-        app:layout_constraintTop_toBottomOf="@id/tv_func_title" />
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-    <TextView
-        android:id="@+id/tv_site_notification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dpSpace"
-        android:fontFamily="@font/poppins_medium"
-        android:text="Thông báo chung"
-        android:textColor="@color/text_black"
-        android:textSize="@dimen/textNormal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rcv_func_home" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_func_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_space"
+                android:layout_marginTop="@dimen/dp_space_block"
+                android:fontFamily="@font/font_bold"
+                android:text="Khám phá"
+                android:textColor="@color/text_black_title"
+                android:textSize="@dimen/text_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/btn_func_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_space"
+                android:drawableStart="@drawable/ic_edit_for_textview"
+                android:drawablePadding="@dimen/dp8"
+                android:drawableTint="@color/text_black_title"
+                android:fontFamily="@font/font_regular"
+                android:text="Tuỳ chỉnh"
+                android:textColor="@color/text_black_title"
+                android:textSize="@dimen/text_content"
+                app:layout_constraintBottom_toBottomOf="@id/tv_func_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="HardcodedText"
+                tools:targetApi="m" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcv_func_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0"
+                android:layout_marginHorizontal="@dimen/dp_space_0.5"
+                android:layout_marginTop="@dimen/dp_space_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_func_title" />
+
+            <TextView
+                android:id="@+id/tv_site_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_space"
+                android:layout_marginTop="@dimen/dp_space_block"
+                android:fontFamily="@font/font_bold"
+                android:text="Sự kiện sắp tới"
+                android:textColor="@color/text_black_title"
+                android:textSize="@dimen/text_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rcv_func_home"
+                tools:ignore="HardcodedText" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcc_event"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_space_title"
+                tools:itemCount="1"
+                app:layout_constraintTop_toBottomOf="@id/tv_site_notification"
+                tools:listitem="@layout/item_rcc_event" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

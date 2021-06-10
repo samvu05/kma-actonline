@@ -1,9 +1,11 @@
 package com.sam.actonline.network
 
 import com.sam.actonline.model.AuthResponse
+import com.sam.actonline.model.course.ItemCourse
+import com.sam.actonline.model.coursedetail.ItemSection
 import com.sam.actonline.model.Site
-import com.sam.actonline.utils.Constant
-import retrofit2.Call
+import com.sam.actonline.model.event.BaseEvent
+import com.sam.actonline.model.event.ItemEventDetail
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -24,18 +26,37 @@ interface MoodleService {
     @GET("webservice/rest/server.php?wsfunction=core_webservice_get_site_info")
     suspend fun getSite(): Response<Site>
 
+    //    Get all the user courses
+    @GET("webservice/rest/server.php?wsfunction=core_enrol_get_users_courses")
+    suspend fun getCourses(@Query("userid") id: Int): Response<List<ItemCourse>>
 
-//    /**
-//     * Get all the user courses
-//     */
-//    @GET("webservice/rest/server.php?wsfunction=core_enrol_get_users_courses")
-//    fun getCourses(@Query("userid") id: Int): Single<List<Course>>
-//
-//    /**
-//     * Get course information
-//     * param
-//     */
-//    @GET("webservice/rest/server.php?wsfunction=core_course_get_contents")
-//    fun getCourseContent(@Query("courseid") courseID: Int): Single<List<Section>>
+    //    Get course information
+    @GET("webservice/rest/server.php?wsfunction=core_course_get_contents")
+    suspend fun getCourseContent(@Query("courseid") courseID: Int): Response<List<ItemSection>>
+
+
+    //    Get event by ID
+    @GET("webservice/rest/server.php?wsfunction=core_calendar_get_calendar_event_by_id")
+    suspend fun getEventByID(@Query("eventid") eventid: Int): Response<BaseEvent>
+
+    //    Get upcoming events
+    @GET("webservice/rest/server.php?wsfunction=core_calendar_get_calendar_upcoming_view")
+    suspend fun getUpcomingEvent(): Response<BaseEvent>
+
+    //    Get event by Day
+    @GET("webservice/rest/server.php?wsfunction=core_calendar_get_calendar_day_view")
+    suspend fun getEventDayView(
+        @Query("year") year: Int,
+        @Query("month") month: Int,
+        @Query("day") day: Int
+    ): Response<BaseEvent>
+
+    //    Get event by month
+    @GET("webservice/rest/server.php?wsfunction=core_calendar_get_calendar_monthly_view")
+    suspend fun getEventMonthView(
+        @Query("year") year: Int,
+        @Query("month") month: Int,
+    ): Response<BaseEvent>
+
 
 }

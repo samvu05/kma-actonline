@@ -16,8 +16,8 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_below="@id/iv_empty"
-        android:fontFamily="@font/poppins_regular"
-        android:textSize="@dimen/textLarge"
+        android:fontFamily="@font/font_regular"
+        android:textSize="@dimen/text_title_extra"
         android:text="Hôm nay bạn được nghỉ !"
         android:textAllCaps="false" />
 </RelativeLayout>

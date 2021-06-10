@@ -1,22 +1,20 @@
 package com.sam.actonline.view.login
 
-import android.content.Context
 import android.content.Intent
-import android.net.ConnectivityManager
-import android.net.NetworkInfo
+import android.content.res.ColorStateList
+import android.os.Build
 import android.text.method.PasswordTransformationMethod
 import android.util.Log
 import androidx.activity.viewModels
+import androidx.core.graphics.toColorInt
 import com.sam.actonline.base.BaseActivity
 import com.sam.actonline.databinding.ActivityLoginBinding
-import com.sam.actonline.extention.checkInternet
-import com.sam.actonline.extention.hideKeyboard
-import com.sam.actonline.extention.showToast
+import com.sam.actonline.extention.*
+import com.sam.actonline.utils.AlertHelper
 import com.sam.actonline.utils.PrefHelper
 import com.sam.actonline.view.main.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_login.view.*
+import java.util.*
 import javax.inject.Inject
 
 /**
@@ -56,10 +54,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
     private fun onClick() {
         binding.apply {
-            btnLogin.setOnClickListener {
-                login()
+            btnLogin.setOnCustomClick() {
                 hideKeyboard()
+                model.login("admin", "Samvu@12345")
             }
+
             boxSavePassword.setOnCheckedChangeListener { _, isChecked ->
                 preferences.isRememberPassword = isChecked
             }

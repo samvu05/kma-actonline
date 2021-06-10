@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package com.sam.actonline.view.adapter
 
 import androidx.fragment.app.Fragment

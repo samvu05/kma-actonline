@@ -1,39 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_layout"
     android:layout_width="wrap_content"
     android:layout_height="@dimen/dp120"
-    android:layout_margin="@dimen/dpSpaceHalf"
-    app:cardCornerRadius="@dimen/dp8"
-    app:cardElevation="@dimen/dp4">
+    android:layout_margin="@dimen/dp_space_0.5"
+    android:padding="@dimen/dp4"
+    android:background="@drawable/bg_rcc_round_10">
 
-    <RelativeLayout
-        android:id="@+id/btn_layout"
+    <TextView
+        android:id="@+id/txt_title_function"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/ripple_background">
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/dp12"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/font_regular"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Chức năng"
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_content" />
 
-        <TextView
-            android:id="@+id/txt_title_function"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp16"
-            android:layout_marginTop="@dimen/dp8"
-            android:layout_toStartOf="@id/img_function"
-            android:fontFamily="@font/poppins_light"
-            android:textSize="@dimen/textNormal"
-            android:text="Chỉ đường đến trường"
-            android:textColor="@color/text_color_primary"
-            />
+    <ImageView
+        android:id="@+id/img_function"
+        android:layout_width="@dimen/dp80"
+        android:layout_height="@dimen/dp80"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dp8"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_placeholder_view"
+        tools:ignore="ContentDescription" />
 
-        <ImageView
-            android:id="@+id/img_function"
-            android:layout_width="@dimen/dp80"
-            android:layout_height="@dimen/dp80"
-            android:layout_alignParentEnd="true"
-            android:scaleType="fitXY"
-            android:src="@drawable/img_maps_direction"
-            android:layout_marginEnd="@dimen/dp8"
-            android:layout_centerVertical="true"/>
-    </RelativeLayout>
-</com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

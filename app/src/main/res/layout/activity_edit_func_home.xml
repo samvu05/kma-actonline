@@ -34,11 +34,11 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dp8"
                 android:layout_marginEnd="@dimen/dp16"
-                android:fontFamily="@font/poppins_bold"
+                android:fontFamily="@font/font_bold"
                 android:gravity="center"
-                android:text="@string/txt_edit_function"
-                android:textColor="@color/text_white"
-                android:textSize="@dimen/textNormal"
+                android:text="@string/edit_function"
+                android:textColor="@color/text_white_title"
+                android:textSize="@dimen/text_content"
                 app:layout_constraintBottom_toBottomOf="@id/btn_back"
                 app:layout_constraintStart_toEndOf="@id/btn_back"
                 app:layout_constraintTop_toTopOf="@id/btn_back" />
@@ -66,7 +66,7 @@
         android:elevation="@dimen/dp4"
         android:text="@string/edit"
         android:textAllCaps="false"
-        android:textColor="@color/text_white"
+        android:textColor="@color/text_white_title"
         app:cornerRadius="@dimen/dp8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,7 +77,7 @@
         android:id="@+id/rcc_functions"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/dpSpaceHalf"
+        android:layout_margin="@dimen/dp_space_0.5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/btn_edit_functions" />
 

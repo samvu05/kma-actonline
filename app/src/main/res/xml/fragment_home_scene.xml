@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500">
+        <KeyFrameSet>
+            <KeyAttribute
+                android:translationY="500dp"
+                motion:framePosition="100"
+                motion:motionTarget="@id/background" />
+
+            <KeyAttribute
+                android:rotation="360"
+                motion:framePosition="100"
+                motion:motionTarget="@id/btn_close_app" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                motion:framePosition="100"
+                android:scaleX="0.0"
+                android:scaleY="0.0"
+                motion:motionTarget="@+id/tv_hello" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="0.0"
+                android:scaleY="0.0"
+                android:translationY="140dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/tv_appname" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="0.0"
+                android:scaleY="0.0"
+                android:translationY="140dp"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/btn_notification" />
+
+            <KeyAttribute
+                android:alpha="0.0"
+                android:scaleX="0.0"
+                android:scaleY="0.0"
+                motion:framePosition="100"
+                motion:motionTarget="@+id/tv_show_my_course" />
+
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/tv_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VU DINH SAM"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/imv_avatar" />
+
+        <Constraint
+            android:id="@+id/imv_avatar"
+            android:layout_width="@dimen/dp80"
+            android:layout_height="@dimen/dp80"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/tv_hello" />
+
+        <Constraint
+            android:id="@+id/btn_close_app"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            motion:layout_constraintBottom_toBottomOf="@id/tv_appname"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/tv_appname" />
+        <Constraint
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="0dp"
+            android:layout_height="1000dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/tv_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp64"
+            android:layout_marginStart="@dimen/dp16"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/imv_avatar"
+            android:layout_width="@dimen/dp48"
+            android:layout_height="@dimen/dp48"
+            motion:layout_constraintBottom_toBottomOf="@id/tv_fullname"
+            motion:layout_constraintStart_toEndOf="@id/tv_fullname"
+            motion:layout_constraintTop_toTopOf="@id/tv_fullname" />
+
+        <Constraint
+            android:id="@+id/btn_close_app"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            motion:layout_constraintBottom_toBottomOf="@id/tv_fullname"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="@id/tv_fullname" />
+    </ConstraintSet>
+</MotionScene>

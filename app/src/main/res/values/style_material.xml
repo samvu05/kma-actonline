@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    For ShapeableImageView-->
+    <style name="ShapeAppearanceOverlay.App.CornerSize5Percent" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">10dp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+
+    <!--    For Bottomsheet -->
+    <style name="BottomSheetDialogTheme" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <!--    For Material Dialog-->
     <style name="DialogTheme">
         <item name="android:windowEnterAnimation">@anim/zoom_out</item>
         <item name="android:windowExitAnimation">@anim/zoom_in</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
-        <item name="cornerSize">10%</item>
+    <style name="RoundShapeTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="shapeAppearanceMediumComponent">@style/RoundShapeAppearance</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
     </style>
 
-    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
-        <item name="cornerSize">50%</item>
+    <style name="RoundShapeAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp16</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+
     </style>
 
 </resources>

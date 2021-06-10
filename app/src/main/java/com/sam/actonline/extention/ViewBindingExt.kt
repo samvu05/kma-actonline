@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.sam.actonline.base.BaseActivity
+import com.sam.actonline.base.BaseBottomSheet
 import com.sam.actonline.base.BaseFragment
 import java.lang.reflect.ParameterizedType
 
@@ -70,15 +71,6 @@ internal fun Any.findClass(): Class<*> {
     return result
 }
 
-inline fun <reified V : ViewBinding> ViewGroup.toBinding(): V {
-    return V::class.java.getMethod(
-        "inflate",
-        LayoutInflater::class.java,
-        ViewGroup::class.java,
-        Boolean::class.java
-    ).invoke(null, LayoutInflater.from(context), this, false) as V
-}
-
 internal fun <V : ViewBinding> BaseActivity<V>.getBinding(): V {
     return findClass().getBinding(layoutInflater)
 }
@@ -89,3 +81,11 @@ internal fun <V : ViewBinding> BaseFragment<V>.getBinding(
 ): V {
     return findClass().getBinding(inflater, container)
 }
+
+internal fun <V : ViewBinding> BaseBottomSheet<V>.getBinding(
+    inflater: LayoutInflater,
+    container: ViewGroup?
+): V {
+    return findClass().getBinding(inflater, container)
+}
+

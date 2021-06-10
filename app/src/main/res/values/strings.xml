@@ -3,7 +3,7 @@
     <string name="hello">Xin chào !</string>
     <string name="slogan">Thành công là tổng thể của những nỗ lực nhỏ, lặp đi lặp lại ngày này qua ngày khác.</string>
     <string name="login_now">Đăng nhập</string>
-    <string name="app_name_inapp">A C T O N L I N E</string>
+    <string name="app_name_inapp">K M A - E L E A R N I N G</string>
     <string name="username">Tên đăng nhập</string>
     <string name="password">Mật khẩu</string>
     <!-- TODO: Remove or change this placeholder text -->
@@ -19,7 +19,7 @@
     <string name="site_telephone">Tel: 04.38544244</string>
     <string name="site_website">Website: www.actvn.edu.vn</string>
     <string name="maps_direction">Tìm đường đến trường</string>
-    <string name="txt_edit_function">Tuỳ chỉnh tính năng</string>
+    <string name="edit_function">Tuỳ chỉnh tính năng</string>
     <string name="edit">Tuỳ chỉnh</string>
     <string name="ok">Đồng ý</string>
     <string name="cancel">Huỷ</string>
@@ -30,4 +30,41 @@
     <string name="tips_editsetting_decs">Kéo thả các ô để thay đổi vị trí</string>
     <string name="success">Thành công</string>
     <string name="saved_edited">Thiết lập thành công !</string>
+
+    <string name="default_long_text">Lorem is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="default_short_text">A more personal experience</string>
+    <string name="default_empty_text">Không có nội dung</string>
+    <string name="default_date_text">05/05/2022</string>
+
+    <!--    For Custom Calendar-->
+    <string name="material_calendar_monday">T2</string>
+    <string name="material_calendar_tuesday">T3</string>
+    <string name="material_calendar_wednesday">T4</string>
+    <string name="material_calendar_thursday">T5</string>
+    <string name="material_calendar_friday">T6</string>
+    <string name="material_calendar_saturday">T7</string>
+    <string name="material_calendar_sunday">CN</string>
+
+    <array name="material_calendar_months_array">
+        <item>Tháng Một</item>
+        <item>Tháng Hai</item>
+        <item>Tháng Ba</item>
+        <item>Tháng Tư</item>
+        <item>Tháng Năm</item>
+        <item>Tháng Sáu</item>
+        <item>Tháng Bảy</item>
+        <item>Tháng Tám</item>
+        <item>Tháng Chín</item>
+        <item>Tháng Mười</item>
+        <item>Tháng Mười một</item>
+        <item>Tháng Mười hai</item>
+    </array>
+
+    <string name="material_calendar_today_button">Hôm nay</string>
+    <string name="material_calendar_positive_button">Đồng ý</string>
+    <string name="material_calendar_negative_button">Huỷ</string>
+    <string name="txt_loading">Đang tải, vui lòng chờ trong giây lát.</string>
+    <string name="no_posts_to_display">Không có bài viết nào !</string>
+
+
 </resources>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="48dp">
+
+    <ImageButton
+        android:id="@+id/btn_close"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/ripple_transparent"
+        android:padding="@dimen/dp16"
+        android:src="@drawable/ic_close"
+        app:tint="@color/text_black_title"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/btn_go_web"
+        android:layout_width="?actionBarSize"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ripple_transparent"
+        android:padding="@dimen/dp16"
+        android:src="@drawable/ic_go_to_web"
+        app:tint="@color/text_black_title"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_toStartOf="@id/btn_go_web"
+        android:layout_toEndOf="@id/btn_close"
+        android:fontFamily="@font/font_bold"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="@string/default_short_text"
+        android:textColor="@color/text_black_title"
+        android:textSize="@dimen/text_title_large" />
+
+    <RelativeLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:layout_marginTop="@dimen/text_title">
+
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:drawablePadding="@dimen/dp4"
+                android:fontFamily="@font/font_light"
+                android:text="Thời gian:"
+                android:textColor="@color/text_black_comment"
+                android:textSize="@dimen/text_comment"
+                app:drawableStartCompat="@drawable/ic_tv_calendar"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/text_black_comment" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_top"
+            android:layout_marginTop="@dimen/dp_space_0.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:drawablePadding="@dimen/dp4"
+                android:fontFamily="@font/font_light"
+                android:text="Loại:"
+                android:textColor="@color/text_black_comment"
+                android:textSize="@dimen/text_comment"
+                app:drawableStartCompat="@drawable/ic_tv_type"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_type"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/text_black_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_course"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_type"
+            android:layout_marginTop="@dimen/dp_space_0.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:drawablePadding="@dimen/dp4"
+                android:fontFamily="@font/font_light"
+                android:text="Khoá học:"
+                android:textColor="@color/text_black_comment"
+                android:textSize="@dimen/text_comment"
+                app:drawableStartCompat="@drawable/ic_tv_course"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_course"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/text_black_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_position"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_course"
+            android:layout_marginTop="@dimen/dp_space_0.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:drawablePadding="@dimen/dp4"
+                android:fontFamily="@font/font_light"
+                android:text="Địa điểm:"
+                android:textColor="@color/text_black_comment"
+                android:textSize="@dimen/text_comment"
+                app:drawableStartCompat="@drawable/ic_tv_location"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/text_black_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_position"
+            android:layout_marginTop="@dimen/dp_space_0.5"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.3"
+                android:drawablePadding="@dimen/dp4"
+                android:fontFamily="@font/font_light"
+                android:text="Nội dung:"
+                android:textColor="@color/text_black_comment"
+                android:textSize="@dimen/text_comment"
+                app:drawableStartCompat="@drawable/ic_tv_desc"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:ellipsize="end"
+                android:fontFamily="@font/font_regular"
+                android:maxLines="6"
+                android:textColor="@color/text_black_content" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_save_event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout_description"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_space_block"
+            android:fontFamily="@font/font_regular"
+            android:text="Thêm vào Lịch"
+            android:textAllCaps="false"
+            app:backgroundTint="@color/btn_dark"
+            app:cornerRadius="@dimen/dp20"
+            app:rippleColor="@color/primary_transparent"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/place_holder"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_space_block"
+        android:layout_below="@id/tv_name"
+        android:layout_centerHorizontal="true">
+
+        <ProgressBar
+            android:id="@+id/progess_bar"
+            android:layout_width="?actionBarSize"
+            android:layout_height="?actionBarSize"
+            android:indeterminateTint="@color/primary"
+            android:progressTint="@color/btn_dark"
+            android:layout_centerHorizontal="true"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progess_bar"
+            android:fontFamily="@font/font_regular"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_space"
+            android:textColor="@color/text_black_title"
+            android:text="@string/txt_loading" />
+    </RelativeLayout>
+</RelativeLayout>

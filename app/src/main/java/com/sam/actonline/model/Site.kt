@@ -60,9 +60,6 @@ data class Site(
     @SerializedName("uploadfiles")
     val uploadFiles: Int,
 
-//    @SerializedName("advancedfeatures")
-//    val advancedFeatures: List<SiteAdvanceFeatures>,
-
     @SerializedName("errorcode")
     val errorcode: String?
 )

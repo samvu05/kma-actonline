@@ -23,7 +23,7 @@
         android:id="@+id/tv_splash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_regular"
+        android:fontFamily="@font/font_regular"
         android:gravity="center"
         android:layout_marginTop="@dimen/dp16"
         android:paddingHorizontal="@dimen/dp24"
