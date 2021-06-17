@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient_white"
     android:paddingBottom="48dp">
 
     <ImageButton
         android:id="@+id/btn_close"
         android:layout_width="?actionBarSize"
         android:layout_height="?actionBarSize"
-        android:background="@drawable/ripple_transparent"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="@dimen/dp16"
         android:src="@drawable/ic_close"
         app:tint="@color/text_black_title"
@@ -21,7 +22,7 @@
         android:layout_width="?actionBarSize"
         android:layout_height="?actionBarSize"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/ripple_transparent"
+        android:background="?attr/selectableItemBackgroundBorderless"
         android:padding="@dimen/dp16"
         android:src="@drawable/ic_go_to_web"
         app:tint="@color/text_black_title"
@@ -208,9 +209,8 @@
             android:fontFamily="@font/font_regular"
             android:text="Thêm vào Lịch"
             android:textAllCaps="false"
-            app:backgroundTint="@color/btn_dark"
+            app:backgroundTint="@color/primary"
             app:cornerRadius="@dimen/dp20"
-            app:rippleColor="@color/primary_transparent"
             tools:ignore="HardcodedText" />
     </RelativeLayout>
 

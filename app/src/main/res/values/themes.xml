@@ -17,8 +17,12 @@
         <item name="android:statusBarColor" tools:targetApi="lollipop">@color/primary_dark</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
 
-        <!--        Background Color-->
+        <!-- Background Color-->
         <item name="android:windowBackground">@color/background_light</item>
+
+
+<!--        BottomSheet Custom theme-->
+        <item name="bottomSheetDialogTheme">@style/BottomSheetDialogTheme</item>
 
     </style>
 

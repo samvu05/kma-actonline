@@ -61,7 +61,6 @@ class CourseContentFragment : BaseFragment<FragmentCourseContentBinding>() {
         binding.rccSection.apply {
             adapter = mAdapter
             layoutManager = LinearLayoutManager(requireContext())
-            hasFixedSize()
         }
     }
 

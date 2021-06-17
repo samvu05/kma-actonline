@@ -5,56 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:statusBarForeground="@color/white">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_scrollFlags="scroll|enterAlways">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/img_background_appbar"
-                tools:ignore="ContentDescription" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:fontFamily="@font/font_semibold"
-                android:text="Lịch biểu của tôi"
-                android:textColor="@color/text_white_title"
-                android:textSize="@dimen/text_title"
-                tools:ignore="HardcodedText" />
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/btn_close_app"
-                android:layout_width="?actionBarSize"
-                android:layout_height="?actionBarSize"
-                android:layout_alignParentEnd="true"
-                android:background="@color/primary_transparent"
-                android:padding="@dimen/dp16"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_close_app"
-                android:visibility="gone" />
-
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:layout_width="?actionBarSize"
-                android:layout_height="?actionBarSize"
-                android:background="@color/primary_transparent"
-                android:padding="@dimen/dp16"
-                android:scaleType="fitXY"
-                android:src="@drawable/ic_back"
-                android:visibility="gone" />
-        </RelativeLayout>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -68,7 +18,7 @@
                 android:id="@+id/calendar_view"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:headerColor="#9E9E9E"
+                app:headerColor="#0e47a1"
                 app:layout_constraintTop_toTopOf="parent"
                 app:todayLabelColor="@color/highlight" />
 

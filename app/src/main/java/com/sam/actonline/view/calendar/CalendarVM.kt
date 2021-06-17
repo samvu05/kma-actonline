@@ -26,8 +26,11 @@ class CalendarVM @Inject constructor(
 ) :
     ViewModel() {
 
-    val dateEvents = MutableLiveData<List<ItemEvent>>()
     val monthEvents = MutableLiveData<MutableList<EventDay>>()
+
+
+
+    val dateEvents = MutableLiveData<List<ItemEvent>>()
 
     fun getEventByDate(year: Int, month: Int, date: Int) {
         viewModelScope.launch {

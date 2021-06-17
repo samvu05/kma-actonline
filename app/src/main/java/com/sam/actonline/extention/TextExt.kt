@@ -92,22 +92,21 @@ fun String.toDownloadLink(): String =
     }
 
 fun Int.toDateTimeFromTimeStamp(): String {
-    try {
+    return try {
         val template = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
         val netDate = Date(this.toLong() * 1000)
-        return template.format(netDate)
-
+        template.format(netDate)
     } catch (e: Exception) {
-        return e.toString()
+        e.toString()
     }
 }
 
 fun Long.toDateTimeFromLong(): String{
-    try {
+    return try {
         val template = SimpleDateFormat("dd/MM/yyyy", Locale.ENGLISH)
-        return template.format(this)
+        template.format(this)
     } catch (e: Exception) {
-        return e.toString()
+        e.toString()
     }
 }
 

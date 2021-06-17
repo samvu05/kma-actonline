@@ -65,6 +65,20 @@
     <string name="material_calendar_negative_button">Huỷ</string>
     <string name="txt_loading">Đang tải, vui lòng chờ trong giây lát.</string>
     <string name="no_posts_to_display">Không có bài viết nào !</string>
+    <string name="item_maps">Vị trí Học viện</string>
+    <string name="go_to_website">Truy cập Website</string>
+    <string name="app_info">Thông tin ứng dụng</string>
+    <string name="share_to_friend">Chia sẻ với bạn bè</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="close_app">Đóng ứng dụng</string>
+    <string name="more">Khác</string>
+    <string name="calendar">Lịch biểu</string>
+    <string name="courses">Khoá học</string>
+    <string name="home">Trang chủ</string>
+    <string name="function">Chức năng</string>
+    <string name="please_wait">Bạn vui lòng chờ một chút !</string>
+    <string name="new_feeds">Bảng tin</string>
+    <string name="my_medal">Huy hiệu của tôi</string>
 
 
 </resources>

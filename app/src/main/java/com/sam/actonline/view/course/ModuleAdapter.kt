@@ -37,6 +37,10 @@ class ModuleAdapter(
             if (item.description.isNullOrEmpty()) line1.toGone() else line1.toVisible()
             imvModule.setImageResource(item.moduleIcon)
 
+            if (item.getModuleType() == Module.Type.LABEL){
+                tvName.setHtmlTextClickable(item.name.substringBefore("\n"))
+            }
+
             if (!item.canDownload) {
                 imvDownload.setImageResource(R.drawable.ic_watch_more)
             } else {
@@ -61,5 +65,9 @@ class ModuleAdapter(
     fun setData(data: MutableList<Module>) {
         data.also { it.also { it.also { this.data = it } } }
         notifyDataSetChanged()
+    }
+
+    fun reload() {
+       notifyDataSetChanged()
     }
 }

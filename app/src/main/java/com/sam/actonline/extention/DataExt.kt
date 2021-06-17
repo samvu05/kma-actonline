@@ -17,69 +17,35 @@ fun Activity.getListHomeFunction(): MutableList<Function> {
             Function(
                 1,
                 HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
+                getString(R.string.item_maps),
+                R.drawable.ic_maps4
             )
         )
         add(
             Function(
                 2,
-                HomeFunctionType.HOME_SITE,
-                "Vào trang WEB",
-                R.drawable.img_web
+                HomeFunctionType.DOWNLOADED,
+                "Tệp ngoại tuyến",
+                R.drawable.ic_folder
             )
         )
         add(
             Function(
                 3,
-                HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
+                HomeFunctionType.BADGES,
+                "Huy hiệu của tôi",
+                R.drawable.ic_medal5
             )
         )
         add(
             Function(
                 4,
-                HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
-            )
-        )
-
-        add(
-            Function(
-                5,
-                HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
-            )
-        )
-        add(
-            Function(
-                6,
-                HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
-            )
-        )
-        add(
-            Function(
-                7,
-                HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
-            )
-        )
-        add(
-            Function(
-                8,
-                HomeFunctionType.DIRECTION,
-                getString(R.string.maps_direction),
-                R.drawable.img_maps_direction
+                HomeFunctionType.HOME_SITE,
+                "Bảng tin",
+                R.drawable.ic_assignment
             )
         )
     }
-
     return listFunction
 }
 

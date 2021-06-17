@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RccMargin"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/container"
+    android:background="@drawable/bg_rcc_round_10"
+    android:padding="@dimen/dp_space">
+
+    <ImageView
+        android:id="@+id/iv_medal"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_medal" />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_medal"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/font_bold"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="Học sinh tích cực"
+        android:textColor="@color/text_black_title"
+        android:textSize="@dimen/text_title_large" />
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="@dimen/dp8"
+        android:background="#FFCA28" />
+
+    <TextView
+        android:id="@+id/tv_date_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/font_light"
+        android:text="Được trao ngày: "
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_comment" />
+
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_date_title"
+        android:layout_marginStart="@dimen/dp_space"
+        android:layout_marginTop="@dimen/dp8"
+        android:layout_toEndOf="@id/tv_date_title"
+        android:fontFamily="@font/font_regular"
+        android:text="22/10/2021"
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_content" />
+
+
+    <TextView
+        android:id="@+id/tv_author_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_date_title"
+        android:layout_marginTop="@dimen/dp4"
+        android:fontFamily="@font/font_light"
+        android:text="Bởi: "
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_comment" />
+
+    <TextView
+        android:id="@+id/tv_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_date"
+        android:layout_alignBottom="@id/tv_author_title"
+        android:layout_marginTop="@dimen/dp8"
+        android:fontFamily="@font/font_regular"
+        android:text="Học viện Kỹ thuật mật mã"
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_content" />
+
+    <TextView
+        android:id="@+id/tv_des_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_author_title"
+        android:layout_marginTop="@dimen/dp4"
+        android:fontFamily="@font/font_light"
+        android:text="Nội dung: "
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_comment" />
+
+    <TextView
+        android:id="@+id/tv_des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tv_date"
+        android:layout_alignTop="@id/tv_des_title"
+        android:fontFamily="@font/font_regular"
+        android:text="Dành cho những bạn đã xuất sắc hoàn thành các bài tập chương môn Pháp luật đại cương"
+        android:textColor="@color/text_black_content"
+        android:textSize="@dimen/text_content" />
+
+    <View
+        android:id="@+id/wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_des"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true" />
+</RelativeLayout>

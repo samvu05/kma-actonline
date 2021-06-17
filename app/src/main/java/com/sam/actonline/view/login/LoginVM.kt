@@ -7,7 +7,6 @@ import androidx.lifecycle.viewModelScope
 import com.sam.actonline.network.MoodleService
 import com.sam.actonline.utils.PrefHelper
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,29 +22,22 @@ class LoginVM @Inject constructor(
 
     var logged = MutableLiveData<Boolean>()
 
-    init {
-    }
-
     fun login(userName: String, pass: String) {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch {
             try {
                 val response = moodleService.login(userName, pass)
                 if (response.isSuccessful) {
                     response.body()!!.apply {
-                        when {
-                            !privateToken.isNullOrBlank() -> {
-                                preferencesHelper.privateToken = privateToken
-                            }
-                            !token.isNullOrBlank() -> {
-                                preferencesHelper.token = token
-                                logged.postValue(true)
-                            }
-                            else -> logged.value = false
-
+                        if (!token.isNullOrEmpty()) {
+                            preferencesHelper.token = token
+                            logged.value = true
+                        } else {
+                            logged.value = false
                         }
                     }
                 } else logged.value = false
             } catch (e: Exception) {
+                logged.value = false
                 Log.d("logDB", e.toString())
             }
         }

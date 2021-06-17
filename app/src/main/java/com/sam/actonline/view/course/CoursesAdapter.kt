@@ -12,7 +12,7 @@ import com.sam.actonline.databinding.ItemRccCourseBinding
 import com.sam.actonline.extention.setImageFromUrl
 import com.sam.actonline.extention.setTextMarque
 import com.sam.actonline.extention.toDateTimeFromTimeStamp
-import com.sam.actonline.model.course.ItemCourse
+import com.sam.actonline.model.ItemCourse
 import com.sam.actonline.utils.Constant
 
 /**

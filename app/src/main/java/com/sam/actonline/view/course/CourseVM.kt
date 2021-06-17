@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sam.actonline.database.MyDatabase
-import com.sam.actonline.model.course.ItemCourse
+import com.sam.actonline.model.ItemCourse
 import com.sam.actonline.model.coursedetail.ItemSection
 import com.sam.actonline.network.MoodleService
 import com.sam.actonline.utils.PrefHelper

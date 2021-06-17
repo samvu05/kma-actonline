@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginHorizontal="@dimen/dp64"
         android:background="@android:color/transparent"
-        android:src="@drawable/img_placeholder_loading"
+        android:src="@drawable/ic_tips"
         tools:ignore="ContentDescription" />
 
     <com.wang.avi.AVLoadingIndicatorView
@@ -37,6 +37,6 @@
         android:maxLines="1"
         android:padding="16dp"
         android:textColor="@color/text_black_content"
-        android:text="Bạn vui lòng chờ trong giây lát !"
+        android:text="@string/please_wait"
         android:textSize="@dimen/text_content" />
 </RelativeLayout>

@@ -2,7 +2,7 @@ package com.sam.actonline.view.splash
 
 import android.content.Intent
 import com.sam.actonline.base.BaseActivity
-import com.sam.actonline.databinding.ActivitySplashBinding
+import com.sam.actonline.databinding.FragmentMoreBinding
 import com.sam.actonline.utils.PrefHelper
 import com.sam.actonline.view.login.LoginActivity
 import com.sam.actonline.view.main.MainActivity
@@ -14,7 +14,7 @@ import javax.inject.Inject
  */
 
 @AndroidEntryPoint
-class SplashActivity : BaseActivity<ActivitySplashBinding>() {
+class SplashActivity : BaseActivity<FragmentMoreBinding>() {
 
     @Inject
     lateinit var pref: PrefHelper

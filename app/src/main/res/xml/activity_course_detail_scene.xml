@@ -28,7 +28,7 @@
         <Constraint
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="?actionBarSize"
             motion:layout_constraintBottom_toBottomOf="parent"
             motion:layout_constraintEnd_toStartOf="@id/btn_close"
             motion:layout_constraintStart_toEndOf="@id/btnBack" />

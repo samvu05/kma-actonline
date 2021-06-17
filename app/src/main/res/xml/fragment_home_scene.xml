@@ -8,7 +8,7 @@
         motion:duration="500">
         <KeyFrameSet>
             <KeyAttribute
-                android:translationY="500dp"
+                android:translationY="200dp"
                 motion:framePosition="100"
                 motion:motionTarget="@id/background" />
 

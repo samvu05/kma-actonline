@@ -8,6 +8,7 @@
     <dimen name="dp12">12dp</dimen>
     <dimen name="dp8">8dp</dimen>
 
+    <dimen name="dp_space_block_large">30dp</dimen>
     <dimen name="dp_space_block">20dp</dimen>
     <dimen name="dp_space_title">8dp</dimen>
 
@@ -20,6 +21,10 @@
     <dimen name="text_title">17sp</dimen>
     <dimen name="text_content">15sp</dimen>
     <dimen name="text_comment">13sp</dimen>
+
+    <dimen name="dp_setting_item_height">60dp</dimen>
+    <dimen name="dp_setting_text_margin">68dp</dimen>
+
 
     <dimen name="sp64">64sp</dimen>
     <dimen name="sp32">32sp</dimen>
@@ -45,4 +50,5 @@
     <dimen name="dp1">1dp</dimen>
     <dimen name="dp50">50dp</dimen>
     <dimen name="text_comment_extra">11sp</dimen>
+    <dimen name="dp5">5dp</dimen>
 </resources>

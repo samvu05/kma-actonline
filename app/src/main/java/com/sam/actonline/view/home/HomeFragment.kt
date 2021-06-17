@@ -5,7 +5,6 @@ import android.content.Intent
 import android.view.View
 import androidx.constraintlayout.motion.widget.MotionLayout
 import androidx.fragment.app.viewModels
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.google.android.material.appbar.AppBarLayout
@@ -16,11 +15,13 @@ import com.sam.actonline.model.Function
 import com.sam.actonline.model.event.ItemEvent
 import com.sam.actonline.utils.PrefHelper
 import com.sam.actonline.utils.enum.HomeFunctionType
+import com.sam.actonline.view.badges.BadgesActivity
 import com.sam.actonline.view.download.DownloadedBSF
 import com.sam.actonline.view.eventdetail.EventDetailBSF
 import com.sam.actonline.view.home.adapter.HomeFuncAdapter
 import com.sam.actonline.view.home.adapter.RccEventAdapter
 import com.sam.actonline.view.maps.MapsActivity
+import com.sam.actonline.view.newfeeds.NewsFeedActivity
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -86,9 +87,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private fun initRccFunction() {
         funcAdapter = HomeFuncAdapter(onClick = rccFunctionClick)
-        val lm = GridLayoutManager(requireContext(), 2)
         binding.rcvFuncHome.apply {
-            layoutManager = lm
             adapter = funcAdapter
             setHasFixedSize(true)
         }
@@ -103,10 +102,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     private val rccFunctionClick: (it: Function) -> Unit = {
         when (it.type) {
             HomeFunctionType.HOME_SITE -> {
-                requireActivity().startBrowser("https://rims.fun")
+//                requireActivity().startBrowser("https://rims.fun")
+                startActivity(Intent(requireContext(), NewsFeedActivity::class.java))
             }
             HomeFunctionType.DIRECTION -> {
                 startActivity(Intent(requireContext(), MapsActivity::class.java))
+            }
+            HomeFunctionType.DOWNLOADED -> {
+                val bsFDownloaded = DownloadedBSF()
+                bsFDownloaded.show(childFragmentManager, bsFDownloaded.tag)
+            }
+            HomeFunctionType.BADGES -> {
+                startActivity(Intent(requireContext(), BadgesActivity::class.java))
             }
             else -> Unit
         }

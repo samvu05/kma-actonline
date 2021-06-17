@@ -11,7 +11,8 @@
     <uses-permission android:name="android.permission.WRITE_CALENDAR" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
 
     <application
@@ -29,7 +30,7 @@
         <activity
             android:name=".view.login.LoginActivity"
             android:screenOrientation="fullSensor"
-            android:theme="@style/DarkStatusBarTheme">
+            android:theme="@style/LightStatusBarTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,7 +46,8 @@
         <activity android:name=".view.home.HomeFunctionSortActivity" />
         <activity android:name=".view.main.MainActivity" />
         <activity android:name=".view.course.CourseDetailActivity" />
-
+        <activity android:name=".view.newfeeds.NewsFeedActivity" />
+        <activity android:name=".view.badges.BadgesActivity"/>
 
         <provider
             android:name="androidx.core.content.FileProvider"

@@ -12,7 +12,7 @@ import com.sam.actonline.R
 fun ImageView.setImageFromUrl(link: String?) {
     if (link == null || link == "") {
         Glide.with(this)
-            .load(R.drawable.img_placeholder_view)
+            .load(R.drawable.img_placeholder_avatar)
             .into(this)
     } else {
 

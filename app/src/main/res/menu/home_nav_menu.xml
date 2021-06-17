@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_main_home"
         android:icon="@drawable/ic_home"
-        android:title="Trang chủ" />
+        android:title="@string/home" />
     <item
         android:id="@+id/nav_main_course"
         android:icon="@drawable/ic_tv_course"
-        android:title="Khoá học" />
+        android:title="@string/courses" />
     <item
         android:id="@+id/nav_main_calendar"
-        android:icon="@drawable/ic_tv_calendar"
-        android:title="Lịch biểu" />
+        android:icon="@drawable/ic_calendar_today"
+        android:title="@string/calendar" />
     <item
-        android:id="@+id/navbot_item_profile"
-        android:icon="@drawable/ic_person"
-        android:title="Cá nhân" />
-
+        android:id="@+id/navbot_item_more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/more" />
 </menu>

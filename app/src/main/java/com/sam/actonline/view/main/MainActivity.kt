@@ -1,6 +1,7 @@
 package com.sam.actonline.view.main
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.sam.actonline.R
 import com.sam.actonline.base.BaseActivity
@@ -8,7 +9,7 @@ import com.sam.actonline.databinding.ActivityMainBinding
 import com.sam.actonline.view.adapter.ScreenSlidePagerAdapter
 import com.sam.actonline.view.calendar.CalendarFragment
 import com.sam.actonline.view.home.HomeFragment
-import com.sam.actonline.view.profile.ProfileFragment
+import com.sam.actonline.view.more.MoreFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.sam.actonline.extention.showLog
 import com.sam.actonline.view.course.CoursesFragment
@@ -40,7 +41,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
                 addFragment(HomeFragment(), "Trang chủ")
                 addFragment(CoursesFragment(), "Khoá học")
                 addFragment(CalendarFragment(), "Lịch")
-                addFragment(ProfileFragment(), "Cá nhân")
+                addFragment(MoreFragment(), "Tuỳ chọn")
             }
 
         mViewPager.apply {
@@ -54,7 +55,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
                 R.id.nav_main_home -> mViewPager.currentItem = 0
                 R.id.nav_main_course -> mViewPager.currentItem = 1
                 R.id.nav_main_calendar -> mViewPager.currentItem = 2
-                R.id.navbot_item_profile -> mViewPager.currentItem = 3
+                R.id.navbot_item_more -> mViewPager.currentItem = 3
             }
             true
         }
@@ -69,6 +70,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), ViewPager.OnPageChange
 
     override fun onPageScrollStateChanged(state: Int) {
     }
+
 
     private fun checkListFile() {
         val ROOT_FOLDER = "ACT Elearning"

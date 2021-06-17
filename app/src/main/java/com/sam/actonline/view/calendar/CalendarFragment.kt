@@ -70,6 +70,7 @@ class CalendarFragment : BaseFragment<FragmentCalendarBinding>() {
                 binding.calendarView.setEvents(it)
             }
         }
+
     }
 
     private fun initRccEvent() {
@@ -142,7 +143,7 @@ class CalendarFragment : BaseFragment<FragmentCalendarBinding>() {
     @SuppressLint("SetTextI18n")
     private fun showEmptyHolder() {
         binding.apply {
-            placeHolder.placeHolderIv.setImageResource(R.drawable.img_maps_direction)
+            placeHolder.placeHolderIv.setImageResource(R.drawable.ic_tips)
             placeHolder.placeHolderIv.toVisible()
             placeHolder.placeHolderTv.text = "Không có sự kiện nào !"
             placeHolder.placeHolderProgess.toGone()

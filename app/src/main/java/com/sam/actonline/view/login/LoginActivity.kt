@@ -1,5 +1,6 @@
 package com.sam.actonline.view.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.os.Build
@@ -44,10 +45,14 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         })
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setupView() {
         binding.apply {
             boxSavePassword.isChecked = preferences.isRememberPassword
             edtPassword.transformationMethod = PasswordTransformationMethod()
+
+            edtUsername.setText("ct010337")
+            edtPassword.setText("Actvn@12345")
         }
 
     }
@@ -56,7 +61,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         binding.apply {
             btnLogin.setOnCustomClick() {
                 hideKeyboard()
-                model.login("admin", "Samvu@12345")
+                login()
             }
 
             boxSavePassword.setOnCheckedChangeListener { _, isChecked ->

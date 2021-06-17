@@ -131,7 +131,9 @@ class FileHelper(
                 "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" -> R.drawable.ic_exel
                 "application/msword", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" -> R.drawable.ic_word
                 "application/vnd.ms-powerpoint", "application/vnd.openxmlformats-officedocument.presentationml.presentation" -> R.drawable.ic_powerpoint
-                else -> -1
+                "application/octet-stream",  -> R.drawable.ic_coding
+                "image/jpeg" -> R.drawable.ic_image
+                else -> R.drawable.ic_folder
             }
         }
 

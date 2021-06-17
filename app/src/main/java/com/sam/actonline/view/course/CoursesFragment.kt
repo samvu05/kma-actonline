@@ -7,11 +7,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sam.actonline.base.BaseFragment
 import com.sam.actonline.databinding.FragmentCoursesBinding
 import com.sam.actonline.extention.showToast
-import com.sam.actonline.model.course.ItemCourse
+import com.sam.actonline.model.ItemCourse
 import com.sam.actonline.utils.Constant
-import com.sam.actonline.utils.PrefHelper
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 /**
  * Created by Dinh Sam Vu on 5/12/2021.

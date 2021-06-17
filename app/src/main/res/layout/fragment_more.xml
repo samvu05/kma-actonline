@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/primary">
+
+        <TextView
+            style="@style/TextStyleToolbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Chức năng khác"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_setting_item_height"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:layout_marginTop="@dimen/dp_space_block_large"
+        android:background="@drawable/bg_rcc_round_10"
+        
+        android:padding="@dimen/dp_space_0.5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp6"
+            android:src="@drawable/ic_website" />
+
+        <TextView
+            style="@style/TextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_setting_text_margin"
+            android:text="@string/go_to_website" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#757575"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@+id/wraper_website"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_setting_item_height"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:layout_marginTop="@dimen/dp_space_block_large"
+        android:background="@drawable/bg_rcc_round_10"
+        
+        android:padding="@dimen/dp_space_0.5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:contentDescription="@null"
+            android:padding="8dp"
+            android:src="@drawable/ic_gmail" />
+
+        <TextView
+            style="@style/TextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_setting_text_margin"
+            android:text="Góp ý, báo lỗi" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#757575"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@+id/wraper_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_setting_item_height"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:layout_marginTop="@dimen/dp_space"
+        android:background="@drawable/bg_rcc_round_10"
+        
+        android:padding="@dimen/dp_space_0.5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp8"
+            android:src="@drawable/ic_share" />
+
+        <TextView
+            style="@style/TextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_setting_text_margin"
+            android:text="@string/share_to_friend" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#757575"
+            android:contentDescription="@null" />
+        <View
+            android:id="@+id/wraper_share"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_setting_item_height"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:layout_marginTop="@dimen/dp_space"
+        android:background="@drawable/bg_rcc_round_10"
+        
+        android:padding="@dimen/dp_space_0.5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp6"
+            android:src="@drawable/ic_info" />
+
+        <TextView
+            style="@style/TextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_setting_text_margin"
+            android:text="@string/app_info" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#757575"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@+id/wraper_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_setting_item_height"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:layout_marginTop="@dimen/dp_space_block_large"
+        android:background="@drawable/bg_rcc_round_10"
+        
+        android:padding="@dimen/dp_space_0.5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp6"
+            android:src="@drawable/ic_logout" />
+
+        <TextView
+            style="@style/TextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_setting_text_margin"
+            android:text="@string/logout" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#757575"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@+id/wraper_logout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_setting_item_height"
+        android:layout_marginHorizontal="@dimen/dp_space"
+        android:background="@drawable/bg_rcc_round_10"
+        android:layout_marginTop="@dimen/dp_space"
+        android:padding="@dimen/dp_space_0.5">
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:contentDescription="@null"
+            android:padding="@dimen/dp6"
+            android:src="@drawable/ic_exit" />
+
+        <TextView
+            style="@style/TextStyleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp_setting_text_margin"
+            android:text="@string/close_app" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_setting_item_height"
+            android:layout_height="@dimen/dp_setting_item_height"
+            android:layout_alignParentEnd="true"
+            android:padding="16dp"
+            android:src="@drawable/ic_arrow_right"
+            app:tint="#757575"
+            android:contentDescription="@null" />
+
+        <View
+            android:id="@+id/wraper_exit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true" />
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

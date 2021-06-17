@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.sam.actonline.databinding.ItemFunctionHomeBinding
+import com.sam.actonline.extention.setOnCustomClick
 import com.sam.actonline.model.Function
 
 /**
@@ -30,7 +31,7 @@ class HomeFuncAdapter(
             txtTitleFunction.text = item.title
             txtTitleFunction.isSelected = true
 
-            btnLayout.setOnClickListener {
+            btnLayout.setOnCustomClick() {
                 onClick(item)
             }
         }

@@ -1,11 +1,9 @@
 package com.eup.jaemy.ui.setting.adapter
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.eup.jaemy.ui.setting.event.ItemTouchHelperAdapter
-import com.sam.actonline.R
 import com.sam.actonline.databinding.ItemFunctionHomeTitleBinding
 import com.sam.actonline.model.Function
 import java.util.*
@@ -19,7 +17,6 @@ class FunctionAdapter(
     RecyclerView.Adapter<FunctionAdapter.ViewHolder>(), ItemTouchHelperAdapter {
 
     private var listItem = mutableListOf<Function>()
-    private var isEditMode: Boolean = false
 
     class ViewHolder(val binding: ItemFunctionHomeTitleBinding) :
         RecyclerView.ViewHolder(binding.root)
@@ -37,30 +34,12 @@ class FunctionAdapter(
         val item = listItem[position]
         holder.binding.apply {
             txtTitleFunction.text = item.title
-
-            if (!isEditMode) {
-                if (position in 0..3) {
-                    txtTitleFunction.setTextColor(Color.parseColor("#FFFFFF"))
-                    background.setBackgroundResource(R.color.text_white_content)
-                } else {
-                    txtTitleFunction.setTextColor(Color.parseColor("#0783EF"))
-                    background.setBackgroundResource(R.color.white)
-                }
-            } else {
-                txtTitleFunction.setTextColor(Color.parseColor("#0783EF"))
-                background.setBackgroundResource(R.color.white)
-            }
         }
     }
 
     fun updateData(listSearch: MutableList<Function>) {
         this.listItem.clear()
         this.listItem.addAll(listSearch)
-        notifyDataSetChanged()
-    }
-
-    fun switchEditMode(isEditMode: Boolean) {
-        this.isEditMode = isEditMode
         notifyDataSetChanged()
     }
 
