@@ -7,7 +7,7 @@
   <path
       android:pathData="M42,6H14c-1.105,0 -2,0.895 -2,2v7.003h32V8C44,6.895 43.105,6 42,6z">
     <aapt:attr name="android:fillColor">
-      <gradient 
+      <gradient
           android:startY="14.966"
           android:startX="28"
           android:endY="6.45"
@@ -21,7 +21,7 @@
   <path
       android:pathData="M12,33.054V40c0,1.105 0.895,2 2,2h28c1.105,0 2,-0.895 2,-2v-6.946H12z">
     <aapt:attr name="android:fillColor">
-      <gradient 
+      <gradient
           android:startY="42"
           android:startX="28"
           android:endY="33.054"
@@ -35,7 +35,7 @@
   <path
       android:pathData="M12,15.003h32v9.002H12V15.003z">
     <aapt:attr name="android:fillColor">
-      <gradient 
+      <gradient
           android:startY="-15.46"
           android:startX="28"
           android:endY="-15.521"
@@ -49,7 +49,7 @@
   <path
       android:pathData="M12,24.005h32v9.05H12V24.005z">
     <aapt:attr name="android:fillColor">
-      <gradient 
+      <gradient
           android:startY="28.53"
           android:startX="12"
           android:endY="28.53"
@@ -78,7 +78,7 @@
   <path
       android:pathData="M22,34H6c-1.105,0 -2,-0.895 -2,-2V16c0,-1.105 0.895,-2 2,-2h16c1.105,0 2,0.895 2,2v16C24,33.105 23.105,34 22,34z">
     <aapt:attr name="android:fillColor">
-      <gradient 
+      <gradient
           android:startY="14.744"
           android:startX="4.744"
           android:endY="33.493"
