@@ -1,6 +1,7 @@
 package com.sam.actonline.view.login
 
 import android.util.Log
+import androidx.databinding.ObservableBoolean
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -42,4 +43,5 @@ class LoginVM @Inject constructor(
             }
         }
     }
+
 }

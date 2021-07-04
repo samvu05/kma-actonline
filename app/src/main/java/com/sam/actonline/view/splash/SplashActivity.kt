@@ -1,8 +1,13 @@
 package com.sam.actonline.view.splash
 
+import android.animation.Animator
+import android.animation.ObjectAnimator
+import android.animation.PropertyValuesHolder
 import android.content.Intent
+import android.view.View
+import androidx.core.animation.doOnEnd
 import com.sam.actonline.base.BaseActivity
-import com.sam.actonline.databinding.FragmentMoreBinding
+import com.sam.actonline.databinding.ActivitySplashBinding
 import com.sam.actonline.utils.PrefHelper
 import com.sam.actonline.view.login.LoginActivity
 import com.sam.actonline.view.main.MainActivity
@@ -14,22 +19,31 @@ import javax.inject.Inject
  */
 
 @AndroidEntryPoint
-class SplashActivity : BaseActivity<FragmentMoreBinding>() {
+class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     @Inject
     lateinit var pref: PrefHelper
 
     override fun initView() {
-        when {
-            !pref.isRememberPassword -> {
-                pref.logout()
-                startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+        val scaleX = PropertyValuesHolder.ofFloat(View.SCALE_X, 4f)
+        val scaleY = PropertyValuesHolder.ofFloat(View.SCALE_Y, 4f)
+
+        ObjectAnimator.ofPropertyValuesHolder(binding.imvLogo, scaleX, scaleY).run {
+            duration = 1000
+            start()
+            doOnEnd {
+                skipSplash()
             }
-            pref.isRememberPassword && pref.checkToken -> {
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-            }
-            else -> startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+        }
+    }
+
+    private fun skipSplash() {
+        if (pref.isRememberPassword && pref.checkToken) {
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+        } else {
+            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
         }
         finish()
     }
+
 }

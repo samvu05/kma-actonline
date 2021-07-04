@@ -1,6 +1,5 @@
 package com.sam.actonline.utils
 
-import android.content.Context
 import android.content.SharedPreferences
 import androidx.core.content.edit
 
@@ -18,14 +17,10 @@ class PrefHelper(private val pref: SharedPreferences) {
     }
 
     fun logout() {
-        pref.edit {
-            ACCESS_TOKEN to ""
-            PRIVATE_TOKEN to ""
-            USER_ID to ""
-        }
+        token = ""
     }
 
-    val checkToken: Boolean = if (token.isBlank()) false else true
+    val checkToken: Boolean = !token.isBlank()
 
     var token: String
         get() = pref.getString(ACCESS_TOKEN, "")!!

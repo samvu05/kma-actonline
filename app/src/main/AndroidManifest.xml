@@ -28,12 +28,9 @@
         tools:ignore="AllowBackup"
         tools:targetApi="m">
         <activity
-            android:name=".view.login.LoginActivity"
-            android:screenOrientation="fullSensor"
-            android:theme="@style/LightStatusBarTheme">
+            android:name=".view.splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -42,12 +39,13 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
 
+        <activity android:name=".view.login.LoginActivity" />
         <activity android:name=".view.maps.MapsActivity" />
         <activity android:name=".view.home.HomeFunctionSortActivity" />
         <activity android:name=".view.main.MainActivity" />
         <activity android:name=".view.course.CourseDetailActivity" />
         <activity android:name=".view.newfeeds.NewsFeedActivity" />
-        <activity android:name=".view.badges.BadgesActivity"/>
+        <activity android:name=".view.badges.BadgesActivity" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

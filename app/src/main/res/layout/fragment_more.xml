@@ -23,6 +23,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_website"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_setting_item_height"
         android:layout_marginHorizontal="@dimen/dp_space"
@@ -65,6 +66,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_feedback"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_setting_item_height"
         android:layout_marginHorizontal="@dimen/dp_space"
@@ -107,12 +109,12 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_share"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_setting_item_height"
         android:layout_marginHorizontal="@dimen/dp_space"
         android:layout_marginTop="@dimen/dp_space"
         android:background="@drawable/bg_rcc_round_10"
-        
         android:padding="@dimen/dp_space_0.5">
 
         <ImageView
@@ -148,6 +150,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_info"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_setting_item_height"
         android:layout_marginHorizontal="@dimen/dp_space"
@@ -192,6 +195,7 @@
 
 
     <RelativeLayout
+        android:id="@+id/layout_logout"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_setting_item_height"
         android:layout_marginHorizontal="@dimen/dp_space"
@@ -234,6 +238,7 @@
     </RelativeLayout>
 
     <RelativeLayout
+        android:id="@+id/layout_exit"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_setting_item_height"
         android:layout_marginHorizontal="@dimen/dp_space"
@@ -273,8 +278,4 @@
             android:clickable="true"
             android:focusable="true" />
     </RelativeLayout>
-
-
-
-
 </LinearLayout>
